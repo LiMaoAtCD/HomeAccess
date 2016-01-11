@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		873CD63E1C434A790051A1B6 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873CD63D1C434A790051A1B6 /* MainNavigationController.swift */; };
+		873CD6411C434C790051A1B6 /* UserCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873CD6401C434C790051A1B6 /* UserCenter.swift */; };
 		8740ECE81C3FA998001F2E8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740ECE71C3FA998001F2E8B /* AppDelegate.swift */; };
 		8740ECEA1C3FA998001F2E8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740ECE91C3FA998001F2E8B /* ViewController.swift */; };
 		8740ECED1C3FA998001F2E8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8740ECEB1C3FA998001F2E8B /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		873CD63D1C434A790051A1B6 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		873CD6401C434C790051A1B6 /* UserCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenter.swift; sourceTree = "<group>"; };
 		8740ECE41C3FA998001F2E8B /* HomeAccess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeAccess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8740ECE71C3FA998001F2E8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8740ECE91C3FA998001F2E8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		873CD63B1C434A450051A1B6 /* LogSystem */ = {
+			isa = PBXGroup;
+			children = (
+				8740ED0C1C3FAE09001F2E8B /* LoginNavigationController.swift */,
+				8740ED0E1C3FAE67001F2E8B /* LoginViewController.swift */,
+			);
+			name = LogSystem;
+			sourceTree = "<group>";
+		};
+		873CD63C1C434A560051A1B6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8740ECEB1C3FA998001F2E8B /* Main.storyboard */,
+				8740ECE91C3FA998001F2E8B /* ViewController.swift */,
+				873CD63D1C434A790051A1B6 /* MainNavigationController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		873CD63F1C434C480051A1B6 /* UserCenter */ = {
+			isa = PBXGroup;
+			children = (
+				873CD6401C434C790051A1B6 /* UserCenter.swift */,
+			);
+			name = UserCenter;
+			sourceTree = "<group>";
+		};
 		8740ECDB1C3FA998001F2E8B = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +132,10 @@
 		8740ECE61C3FA998001F2E8B /* HomeAccess */ = {
 			isa = PBXGroup;
 			children = (
+				873CD63F1C434C480051A1B6 /* UserCenter */,
 				8740ECE71C3FA998001F2E8B /* AppDelegate.swift */,
-				8740ECE91C3FA998001F2E8B /* ViewController.swift */,
-				8740ECEB1C3FA998001F2E8B /* Main.storyboard */,
-				8740ED0C1C3FAE09001F2E8B /* LoginNavigationController.swift */,
-				8740ED0E1C3FAE67001F2E8B /* LoginViewController.swift */,
+				873CD63C1C434A560051A1B6 /* Main */,
+				873CD63B1C434A450051A1B6 /* LogSystem */,
 				8740ECEE1C3FA998001F2E8B /* Assets.xcassets */,
 				8740ECF01C3FA998001F2E8B /* LaunchScreen.storyboard */,
 				8740ECF31C3FA998001F2E8B /* Info.plist */,
@@ -204,10 +234,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				873CD63E1C434A790051A1B6 /* MainNavigationController.swift in Sources */,
 				8740ED0F1C3FAE67001F2E8B /* LoginViewController.swift in Sources */,
 				8740ECEA1C3FA998001F2E8B /* ViewController.swift in Sources */,
 				8740ED0D1C3FAE09001F2E8B /* LoginNavigationController.swift in Sources */,
 				8740ECE81C3FA998001F2E8B /* AppDelegate.swift in Sources */,
+				873CD6411C434C790051A1B6 /* UserCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +395,7 @@
 				8740ECF81C3FA998001F2E8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,26 +12,36 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var mainNavigationVC: MainNavigationController!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        let login = NSUserDefaults.standardUserDefaults().boolForKey("Login")
+
+        let mainVC = ViewController()
+        mainNavigationVC = MainNavigationController(rootViewController: mainVC)
+        
+        let login = UserCenter.login()
         if login {
-//            let loginVC = LoginViewController()
-//            let loginNavigationController = LoginNavigationController(rootViewController: loginVC)
-//            
-//            window?.rootViewController = loginNavigationController
+
+            self.window?.rootViewController = mainNavigationVC
         } else{
+            
             let loginVC = LoginViewController()
             let loginNavigationController = LoginNavigationController(rootViewController: loginVC)
             
             window?.rootViewController = loginNavigationController
+            
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchLoginVCToMain", name: UserCenter.kSwitchFromLoginVCToMainVC(), object: nil)
         }
-       
+       self.window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    func switchLoginVCToMain() {
+        self.window?.rootViewController = mainNavigationVC
     }
 
     func applicationWillResignActive(application: UIApplication) {
