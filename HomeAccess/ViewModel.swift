@@ -1,5 +1,5 @@
 //
-//  DeviceModel.swift
+//  ViewModel.swift
 //  HomeAccess
 //
 //  Created by AlienLi on 16/1/11.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeviceModel: NSObject {
+class ViewModel: NSObject {
     
     func fetchServerStatus() {
         NetworkManager.fetchServerStatus()
@@ -17,4 +17,6 @@ class DeviceModel: NSObject {
     func fetchDeviceListAndStatus() {
         NetworkManager.fetchDeviceListAndStatus()
     }
+    
+   
 }

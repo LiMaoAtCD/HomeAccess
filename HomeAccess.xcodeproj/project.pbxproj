@@ -10,7 +10,10 @@
 		873CD63E1C434A790051A1B6 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873CD63D1C434A790051A1B6 /* MainNavigationController.swift */; };
 		873CD6411C434C790051A1B6 /* UserCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873CD6401C434C790051A1B6 /* UserCenter.swift */; };
 		873CD6441C4354050051A1B6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873CD6431C4354050051A1B6 /* NetworkManager.swift */; };
-		873CD6461C4356090051A1B6 /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873CD6451C4356090051A1B6 /* DeviceModel.swift */; };
+		873CD6481C4382340051A1B6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873CD6471C4382340051A1B6 /* ViewModel.swift */; };
+		873CD64A1C4382A00051A1B6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873CD6491C4382A00051A1B6 /* LoginModel.swift */; };
+		873CD64C1C4383DB0051A1B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873CD64B1C4383DB0051A1B6 /* User.swift */; };
+		873CD64E1C439F2B0051A1B6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873CD64D1C439F2B0051A1B6 /* LoginViewModel.swift */; };
 		8740ECE81C3FA998001F2E8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740ECE71C3FA998001F2E8B /* AppDelegate.swift */; };
 		8740ECEA1C3FA998001F2E8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740ECE91C3FA998001F2E8B /* ViewController.swift */; };
 		8740ECED1C3FA998001F2E8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8740ECEB1C3FA998001F2E8B /* Main.storyboard */; };
@@ -52,7 +55,10 @@
 		873CD63D1C434A790051A1B6 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		873CD6401C434C790051A1B6 /* UserCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenter.swift; sourceTree = "<group>"; };
 		873CD6431C4354050051A1B6 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		873CD6451C4356090051A1B6 /* DeviceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		873CD6471C4382340051A1B6 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		873CD6491C4382A00051A1B6 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		873CD64B1C4383DB0051A1B6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		873CD64D1C439F2B0051A1B6 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8740ECE41C3FA998001F2E8B /* HomeAccess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeAccess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8740ECE71C3FA998001F2E8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8740ECE91C3FA998001F2E8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 			children = (
 				8740ED0C1C3FAE09001F2E8B /* LoginNavigationController.swift */,
 				8740ED0E1C3FAE67001F2E8B /* LoginViewController.swift */,
+				873CD64D1C439F2B0051A1B6 /* LoginViewModel.swift */,
 			);
 			name = LogSystem;
 			sourceTree = "<group>";
@@ -100,7 +107,9 @@
 				8740ECEB1C3FA998001F2E8B /* Main.storyboard */,
 				8740ECE91C3FA998001F2E8B /* ViewController.swift */,
 				873CD63D1C434A790051A1B6 /* MainNavigationController.swift */,
-				873CD6451C4356090051A1B6 /* DeviceModel.swift */,
+				873CD6471C4382340051A1B6 /* ViewModel.swift */,
+				873CD6491C4382A00051A1B6 /* LoginModel.swift */,
+				873CD64B1C4383DB0051A1B6 /* User.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -249,12 +258,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				873CD63E1C434A790051A1B6 /* MainNavigationController.swift in Sources */,
+				873CD6481C4382340051A1B6 /* ViewModel.swift in Sources */,
+				873CD64E1C439F2B0051A1B6 /* LoginViewModel.swift in Sources */,
 				8740ED0F1C3FAE67001F2E8B /* LoginViewController.swift in Sources */,
 				8740ECEA1C3FA998001F2E8B /* ViewController.swift in Sources */,
+				873CD64A1C4382A00051A1B6 /* LoginModel.swift in Sources */,
 				873CD6441C4354050051A1B6 /* NetworkManager.swift in Sources */,
 				8740ED0D1C3FAE09001F2E8B /* LoginNavigationController.swift in Sources */,
-				873CD6461C4356090051A1B6 /* DeviceModel.swift in Sources */,
 				8740ECE81C3FA998001F2E8B /* AppDelegate.swift in Sources */,
+				873CD64C1C4383DB0051A1B6 /* User.swift in Sources */,
 				873CD6411C434C790051A1B6 /* UserCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

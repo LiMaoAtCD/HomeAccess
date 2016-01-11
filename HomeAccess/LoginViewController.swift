@@ -10,7 +10,9 @@ import UIKit
 import SnapKit
 
 class LoginViewController: UIViewController {
-
+    
+    var viewmodel: LoginViewModel! = LoginViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,8 +20,6 @@ class LoginViewController: UIViewController {
         self.view.backgroundColor = UIColor.lightGrayColor()
         
         configureViews()
-        
-       
         
     }
     
@@ -41,8 +41,15 @@ class LoginViewController: UIViewController {
   
 //    MARK: 点击事件处理
     func login(){
-        UserCenter.setLogin(true)
-        NSNotificationCenter.defaultCenter().postNotificationName(UserCenter.kSwitchFromLoginVCToMainVC(), object: nil)
+        viewmodel.login { (success) -> Void in
+            if success {
+                UserCenter.setLogin(true)
+                NSNotificationCenter.defaultCenter().postNotificationName(UserCenter.kSwitchFromLoginVCToMainVC(), object: nil)
+            } else{
+                print("login error")
+            }
+        }
+
     }
 
     /*
