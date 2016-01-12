@@ -31,6 +31,9 @@
 		8740ED091C3FAD75001F2E8B /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8740ED071C3FAD75001F2E8B /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8740ED0D1C3FAE09001F2E8B /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740ED0C1C3FAE09001F2E8B /* LoginNavigationController.swift */; };
 		8740ED0F1C3FAE67001F2E8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740ED0E1C3FAE67001F2E8B /* LoginViewController.swift */; };
+		877C4DD01C449DB800CFE731 /* ServerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */; };
+		877C4DD51C449DF000CFE731 /* ServerInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */; };
+		877C4DD91C449EA200CFE731 /* ServerInfoDataFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DD81C449EA200CFE731 /* ServerInfoDataFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,6 +76,9 @@
 		8740ED071C3FAD75001F2E8B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		8740ED0C1C3FAE09001F2E8B /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		8740ED0E1C3FAE67001F2E8B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewController.swift; sourceTree = "<group>"; };
+		877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewModel.swift; sourceTree = "<group>"; };
+		877C4DD81C449EA200CFE731 /* ServerInfoDataFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoDataFrame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 				873256701C44914B00B8E77F /* V */,
 				8732566A1C448CE700B8E77F /* M */,
 				873256691C448CDB00B8E77F /* C */,
+				877C4DCE1C449D8300CFE731 /* ServerInfo */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -204,6 +211,40 @@
 				8740ECF31C3FA998001F2E8B /* Info.plist */,
 			);
 			path = HomeAccess;
+			sourceTree = "<group>";
+		};
+		877C4DCE1C449D8300CFE731 /* ServerInfo */ = {
+			isa = PBXGroup;
+			children = (
+				877C4DD31C449DCD00CFE731 /* V */,
+				877C4DD21C449DC800CFE731 /* M */,
+				877C4DD11C449DC100CFE731 /* C */,
+			);
+			name = ServerInfo;
+			sourceTree = "<group>";
+		};
+		877C4DD11C449DC100CFE731 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
+		877C4DD21C449DC800CFE731 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */,
+				877C4DD81C449EA200CFE731 /* ServerInfoDataFrame.swift */,
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		877C4DD31C449DCD00CFE731 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = V;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,7 +340,9 @@
 			files = (
 				873CD63E1C434A790051A1B6 /* MainNavigationController.swift in Sources */,
 				873CD6481C4382340051A1B6 /* ViewModel.swift in Sources */,
+				877C4DD51C449DF000CFE731 /* ServerInfoViewModel.swift in Sources */,
 				873CD64E1C439F2B0051A1B6 /* LoginViewModel.swift in Sources */,
+				877C4DD01C449DB800CFE731 /* ServerInfoViewController.swift in Sources */,
 				8740ED0F1C3FAE67001F2E8B /* LoginViewController.swift in Sources */,
 				8740ECEA1C3FA998001F2E8B /* ViewController.swift in Sources */,
 				873256721C44917D00B8E77F /* MainCell.swift in Sources */,
@@ -307,6 +350,7 @@
 				8740ED0D1C3FAE09001F2E8B /* LoginNavigationController.swift in Sources */,
 				8740ECE81C3FA998001F2E8B /* AppDelegate.swift in Sources */,
 				8732566C1C448D4300B8E77F /* DataSource.swift in Sources */,
+				877C4DD91C449EA200CFE731 /* ServerInfoDataFrame.swift in Sources */,
 				873CD6411C434C790051A1B6 /* UserCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

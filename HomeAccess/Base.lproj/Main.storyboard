@@ -24,6 +24,24 @@
             </objects>
             <point key="canvasLocation" x="827" y="-381"/>
         </scene>
+        <!--Server Info View Controller-->
+        <scene sceneID="pJG-HA-crx">
+            <objects>
+                <viewController storyboardIdentifier="ServerInfoViewController" id="Kae-wY-q2j" customClass="ServerInfoViewController" customModule="HomeAccess" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RbM-S1-Vg8"/>
+                        <viewControllerLayoutGuide type="bottom" id="IKU-Nx-JZ9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X9x-4f-VsE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXe-8V-49r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293" y="-400"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tfg-DP-b31">
             <objects>

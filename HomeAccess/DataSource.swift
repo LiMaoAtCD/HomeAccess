@@ -34,10 +34,14 @@ class DataSource: NSObject, UITableViewDataSource {
         
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(self.identifier, forIndexPath: indexPath)
         if let _ = handler {
-            handler!(cell, items[indexPath.row])
+            handler!(cell, self.itemForIndexPath(indexPath))
         }
         
         return cell
+    }
+    
+    func itemForIndexPath(indexPath: NSIndexPath) -> AnyObject {
+        return self.items[indexPath.row]
     }
 }
 

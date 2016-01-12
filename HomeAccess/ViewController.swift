@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate {
 
     var viewModel: ViewModel!
     
@@ -22,8 +22,7 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
         self.title = "开门吧"
 
-        let dic = ["A":"B"]
-        viewModel = ViewModel(items: [dic])
+        viewModel = ViewModel(items: ["获取服务器信息","设备列表与状态"])
         self.configureTableView()
         
     }
@@ -38,14 +37,29 @@ class ViewController: UIViewController {
             let cell = needCastCell as? MainCell
             if let _ = cell {
                 
-                let dic = item as? [String: String]
-                
-                
-                cell!.titleLabel.text = dic!["A"];
-                cell!.contentLabel.text = dic?.keys.first;
+                let title = item as? String
+                cell!.titleLabel.text = title;
+//                cell!.contentLabel.text = dic?.keys.first;
             }
         })
+        
         tableView.dataSource = dataSource
+        tableView.delegate = self
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        
+//        let item = self.dataSource.itemForIndexPath(indexPath)
+        
+        
+        if indexPath.row == 0 {
+            
+            let serverInfo = ServerInfoViewController.initialFromStoryBoard() as! ServerInfoViewController
+            
+            self.navigationController?.showViewController(serverInfo, sender: self)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,5 +68,14 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension UIViewController {
+    class func initialFromStoryBoard() -> UIViewController{
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewControllerWithIdentifier(String(self)) as UIViewController
+        
+        return vc
+    }
 }
 

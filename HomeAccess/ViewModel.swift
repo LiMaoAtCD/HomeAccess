@@ -19,13 +19,6 @@ class ViewModel: NSObject {
         self.items = items
     }
     
-    func fetchServerStatus() {
-        NetworkManager.fetchServerStatus()
-    }
-    
-    func fetchDeviceListAndStatus() {
-        NetworkManager.fetchDeviceListAndStatus()
-    }
     
    
 }

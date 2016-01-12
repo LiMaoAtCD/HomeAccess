@@ -10,10 +10,64 @@ import UIKit
 
 class ServerInfoViewController: UIViewController {
 
+    let viewModel: ServerInfoViewModel = ServerInfoViewModel()
+    var versionLabel: UILabel!
+    var outOfDateLabel: UILabel!
+    var urlLabel: UILabel!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = "服务器信息"
+        configureStatusViews()
+        
+        viewModel.fetchServerInfo { (success) -> Void in
+            
+            if success {
+                
+                self.updateInfo()
+                
+            }
+        }
+        
+    }
+    
+    func updateInfo() {
+        
+        versionLabel.text = "Version: " + viewModel.dataFrame.version
+        outOfDateLabel.text = "过期时间: " + "\(viewModel.dataFrame.day)"
+        urlLabel.text = "新服务器地址: " + viewModel.dataFrame.url
+
+    }
+    
+    func configureStatusViews(){
+        
+        versionLabel = UILabel()
+        self.view.addSubview(versionLabel)
+        
+        versionLabel.snp_makeConstraints { (make) -> Void in
+            make.centerX.equalTo(view.snp_centerX)
+            make.centerY.equalTo(view.snp_centerY).offset(-50)
+        }
+        
+        outOfDateLabel = UILabel()
+        self.view.addSubview(outOfDateLabel)
+        outOfDateLabel.snp_makeConstraints { (make) -> Void in
+            make.centerX.equalTo(view.snp_centerX)
+            make.centerY.equalTo(view.snp_centerY).offset(0)
+        }
+
+        
+        urlLabel = UILabel()
+        self.view.addSubview(urlLabel)
+        
+        urlLabel.snp_makeConstraints { (make) -> Void in
+            make.centerX.equalTo(view.snp_centerX)
+            make.centerY.equalTo(view.snp_centerY).offset(50)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {

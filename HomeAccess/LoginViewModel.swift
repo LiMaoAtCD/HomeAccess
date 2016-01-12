@@ -14,14 +14,14 @@ class LoginViewModel: NSObject {
     var password: String?
     
     func login(success:successBlock){
-        NetworkManager.login("18900000000", password: "111111") { (data, error) -> Void in
-            print("data:\(data) & error: \(error)")
-            
-            if let _ = error {
-                success(false)
-            } else{
-                success(true)
-            }
-        }
+//        NetworkManager.login("18900000000", password: "111111") { (data, error) -> Void in
+//            print("data:\(data) & error: \(error)")
+//            
+//            if let _ = error {
+//                success(false)
+//            } else{
+//                success(true)
+//            }
+//        }
     }
 }
