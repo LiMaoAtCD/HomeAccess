@@ -10,6 +10,15 @@ import UIKit
 
 class ViewModel: NSObject {
     
+    var items:[AnyObject]! = {
+        let items = [AnyObject]()
+        return items
+    }()
+    
+    init(items: [AnyObject]?) {
+        self.items = items
+    }
+    
     func fetchServerStatus() {
         NetworkManager.fetchServerStatus()
     }
