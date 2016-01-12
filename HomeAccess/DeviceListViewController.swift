@@ -10,10 +10,21 @@ import UIKit
 
 class DeviceListViewController: UIViewController {
 
+    var viewModel: DeviceListViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        viewModel = DeviceListViewModel()
+        
+        viewModel.fetchDeviceList { (success) -> Void in
+            if success {
+// 更新视图
+            } else{
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

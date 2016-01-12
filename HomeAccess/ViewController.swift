@@ -55,10 +55,14 @@ class ViewController: UIViewController, UITableViewDelegate {
         
         if indexPath.row == 0 {
             
-            let serverInfo = ServerInfoViewController.initialFromStoryBoard() as! ServerInfoViewController
-            
-            self.navigationController?.showViewController(serverInfo, sender: self)
+            let serverInfoVC = ServerInfoViewController.initialFromStoryBoard() as! ServerInfoViewController
+            self.navigationController?.showViewController(serverInfoVC, sender: self)
+
+        } else if indexPath.row == 1 {
+            let devicelistVC = DeviceListViewController.initialFromStoryBoard() as! DeviceListViewController
+            self.navigationController?.showViewController(devicelistVC, sender: self)
         }
+        
         
     }
 

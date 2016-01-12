@@ -34,6 +34,9 @@
 		877C4DD01C449DB800CFE731 /* ServerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */; };
 		877C4DD51C449DF000CFE731 /* ServerInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */; };
 		877C4DD91C449EA200CFE731 /* ServerInfoDataFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DD81C449EA200CFE731 /* ServerInfoDataFrame.swift */; };
+		87BCB3521C44CC4200291CE9 /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB3511C44CC4200291CE9 /* DeviceListViewController.swift */; };
+		87BCB3571C44CE8F00291CE9 /* DeviceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB3561C44CE8F00291CE9 /* DeviceListViewModel.swift */; };
+		87BCB3591C44CF3A00291CE9 /* DeviceListShema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB3581C44CF3A00291CE9 /* DeviceListShema.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,6 +82,9 @@
 		877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewController.swift; sourceTree = "<group>"; };
 		877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewModel.swift; sourceTree = "<group>"; };
 		877C4DD81C449EA200CFE731 /* ServerInfoDataFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoDataFrame.swift; sourceTree = "<group>"; };
+		87BCB3511C44CC4200291CE9 /* DeviceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
+		87BCB3561C44CE8F00291CE9 /* DeviceListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListViewModel.swift; sourceTree = "<group>"; };
+		87BCB3581C44CF3A00291CE9 /* DeviceListShema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListShema.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,10 +156,11 @@
 		873CD63C1C434A560051A1B6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				877C4DCE1C449D8300CFE731 /* ServerInfo */,
+				87BCB3501C44CC1F00291CE9 /* DeviceList */,
 				873256701C44914B00B8E77F /* V */,
 				8732566A1C448CE700B8E77F /* M */,
 				873256691C448CDB00B8E77F /* C */,
-				877C4DCE1C449D8300CFE731 /* ServerInfo */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -245,6 +252,40 @@
 			children = (
 			);
 			name = V;
+			sourceTree = "<group>";
+		};
+		87BCB3501C44CC1F00291CE9 /* DeviceList */ = {
+			isa = PBXGroup;
+			children = (
+				87BCB3551C44CE7A00291CE9 /* C */,
+				87BCB3541C44CE7500291CE9 /* V */,
+				87BCB3531C44CE7000291CE9 /* M */,
+			);
+			name = DeviceList;
+			sourceTree = "<group>";
+		};
+		87BCB3531C44CE7000291CE9 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				87BCB3561C44CE8F00291CE9 /* DeviceListViewModel.swift */,
+				87BCB3581C44CF3A00291CE9 /* DeviceListShema.swift */,
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		87BCB3541C44CE7500291CE9 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = V;
+			sourceTree = "<group>";
+		};
+		87BCB3551C44CE7A00291CE9 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				87BCB3511C44CC4200291CE9 /* DeviceListViewController.swift */,
+			);
+			name = C;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +383,7 @@
 				873CD6481C4382340051A1B6 /* ViewModel.swift in Sources */,
 				877C4DD51C449DF000CFE731 /* ServerInfoViewModel.swift in Sources */,
 				873CD64E1C439F2B0051A1B6 /* LoginViewModel.swift in Sources */,
+				87BCB3591C44CF3A00291CE9 /* DeviceListShema.swift in Sources */,
 				877C4DD01C449DB800CFE731 /* ServerInfoViewController.swift in Sources */,
 				8740ED0F1C3FAE67001F2E8B /* LoginViewController.swift in Sources */,
 				8740ECEA1C3FA998001F2E8B /* ViewController.swift in Sources */,
@@ -349,6 +391,8 @@
 				873CD6441C4354050051A1B6 /* NetworkManager.swift in Sources */,
 				8740ED0D1C3FAE09001F2E8B /* LoginNavigationController.swift in Sources */,
 				8740ECE81C3FA998001F2E8B /* AppDelegate.swift in Sources */,
+				87BCB3521C44CC4200291CE9 /* DeviceListViewController.swift in Sources */,
+				87BCB3571C44CE8F00291CE9 /* DeviceListViewModel.swift in Sources */,
 				8732566C1C448D4300B8E77F /* DataSource.swift in Sources */,
 				877C4DD91C449EA200CFE731 /* ServerInfoDataFrame.swift in Sources */,
 				873CD6411C434C790051A1B6 /* UserCenter.swift in Sources */,

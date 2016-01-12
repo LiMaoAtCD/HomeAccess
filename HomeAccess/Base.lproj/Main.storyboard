@@ -40,7 +40,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXe-8V-49r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1293" y="-400"/>
+            <point key="canvasLocation" x="1471" y="-381"/>
+        </scene>
+        <!--Device List View Controller-->
+        <scene sceneID="0wG-Rj-27Q">
+            <objects>
+                <viewController storyboardIdentifier="DeviceListViewController" id="uR1-ec-3QA" customClass="DeviceListViewController" customModule="HomeAccess" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NPw-3x-4UB"/>
+                        <viewControllerLayoutGuide type="bottom" id="DJF-tR-iGm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a3d-Os-K8b">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auz-Xe-Zcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2131" y="-381"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tfg-DP-b31">
