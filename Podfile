@@ -4,6 +4,6 @@
  use_frameworks!
 
 target 'HomeAccess' do
-	
+	pod "PKHUD"
 end
 
