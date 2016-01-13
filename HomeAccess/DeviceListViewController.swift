@@ -8,21 +8,55 @@
 
 import UIKit
 
-class DeviceListViewController: UIViewController {
+class DeviceListViewController: UIViewController, UITableViewDelegate {
 
     var viewModel: DeviceListViewModel!
+    
+    var tableView: UITableView!
+    var dataSource: DataSource!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+
         viewModel = DeviceListViewModel()
+        configureViews()
+    }
+    
+    func configureViews() {
+        
+        dataSource = DataSource(items: viewModel.devices, and: DeviceCell.identifier(), handler: { (devicecell, item) -> Void in
+            let cell = devicecell as! DeviceCell
+            let device = item as! Device
+            cell.nameLabel.text = device.name
+            
+        })
+        
+        tableView = UITableView(frame: CGRectZero, style: .Plain)
+        tableView.delegate = self
+        tableView.dataSource = dataSource
+        
+        self.view.addSubview(tableView)
+
+        tableView.snp_makeConstraints { (make) -> Void in
+            make.edges.equalTo(self.view.snp_edges)
+        }
+        
+        tableView.registerClass(DeviceCell.self, forCellReuseIdentifier: DeviceCell.identifier())
+        tableView.tableFooterView = UIView()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         viewModel.fetchDeviceList { (success) -> Void in
             if success {
-// 更新视图
+//                print(self.viewModel.devices)
+                self.dataSource.items = self.viewModel.devices
+                self.tableView.reloadData()
             } else{
-                
             }
         }
     }
@@ -30,6 +64,16 @@ class DeviceListViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let vc = DeviceDetailViewController.initialFromStoryBoard() as! DeviceDetailViewController
+        let device = dataSource.itemForIndexPath(indexPath) as! Device
+        vc.device = device
+        
+        self.navigationController?.showViewController(vc, sender: self)
     }
     
 

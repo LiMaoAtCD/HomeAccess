@@ -54,8 +54,19 @@ class NetworkManager: NSObject {
     }
     
     //设备远程开锁
-    class func Open(completionHandler:CompletionHandler) {
-        Alamofire.request(.POST, URLString, parameters: ["KEY":"","COMMAND":"OPEN","DATA":self.convertDictionaryToJSON(["DEVICEID":"","CHANNEL":0,"ACTIVETIME":"2012-02-21 12:00:00","USER":"","MESSAGE":"welcome","MODE":"0"])], encoding: .URL, headers: nil).responseJSON { (response) -> Void in
+    class func Open(deviceID: String, channel: Int, user: String, message: String ,mode:String ,completionHandler:CompletionHandler) {
+        
+        var dic = [String: AnyObject]()
+        dic["DEVICEID"] = deviceID
+        dic["CHANNEL"] = channel
+        dic["USER"] = user
+        dic["MESSAGE"] = message
+        dic["MODE"] = mode
+        
+        let dateFormatter = NSDateFormatter()
+        dic["ACTIVETIME"] = dateFormatter.stringFromDate(NSDate())
+        
+        Alamofire.request(.POST, URLString, parameters: ["KEY":"","COMMAND":"OPEN","DATA":self.convertDictionaryToJSON(dic)], encoding: .URL, headers: nil).responseJSON { (response) -> Void in
             self.handleResponseJSON(response, completionhandler: completionHandler)
         }
     }

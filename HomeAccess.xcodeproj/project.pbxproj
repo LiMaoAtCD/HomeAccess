@@ -34,9 +34,11 @@
 		877C4DD01C449DB800CFE731 /* ServerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */; };
 		877C4DD51C449DF000CFE731 /* ServerInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */; };
 		877C4DD91C449EA200CFE731 /* ServerInfoDataFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DD81C449EA200CFE731 /* ServerInfoDataFrame.swift */; };
+		879B35291C45FBB600383F41 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B35281C45FBB600383F41 /* DeviceCell.swift */; };
+		879B352C1C46027E00383F41 /* DeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B352B1C46027E00383F41 /* DeviceDetailViewController.swift */; };
+		879B352E1C461BED00383F41 /* DeviceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B352D1C461BED00383F41 /* DeviceDetailViewModel.swift */; };
 		87BCB3521C44CC4200291CE9 /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB3511C44CC4200291CE9 /* DeviceListViewController.swift */; };
 		87BCB3571C44CE8F00291CE9 /* DeviceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB3561C44CE8F00291CE9 /* DeviceListViewModel.swift */; };
-		87BCB3591C44CF3A00291CE9 /* DeviceListShema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB3581C44CF3A00291CE9 /* DeviceListShema.swift */; };
 		87BCB36A1C45E33400291CE9 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB3691C45E33400291CE9 /* Device.swift */; };
 		87BCB36D1C45E75B00291CE9 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB36C1C45E75B00291CE9 /* UserInfoViewController.swift */; };
 		87BCB36F1C45E8D700291CE9 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB36E1C45E8D700291CE9 /* UserInfoViewModel.swift */; };
@@ -88,9 +90,11 @@
 		877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewController.swift; sourceTree = "<group>"; };
 		877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewModel.swift; sourceTree = "<group>"; };
 		877C4DD81C449EA200CFE731 /* ServerInfoDataFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoDataFrame.swift; sourceTree = "<group>"; };
+		879B35281C45FBB600383F41 /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
+		879B352B1C46027E00383F41 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewController.swift; sourceTree = "<group>"; };
+		879B352D1C461BED00383F41 /* DeviceDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewModel.swift; sourceTree = "<group>"; };
 		87BCB3511C44CC4200291CE9 /* DeviceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
 		87BCB3561C44CE8F00291CE9 /* DeviceListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListViewModel.swift; sourceTree = "<group>"; };
-		87BCB3581C44CF3A00291CE9 /* DeviceListShema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListShema.swift; sourceTree = "<group>"; };
 		87BCB3691C45E33400291CE9 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		87BCB36C1C45E75B00291CE9 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		87BCB36E1C45E8D700291CE9 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
@@ -116,23 +120,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		873256691C448CDB00B8E77F /* C */ = {
-			isa = PBXGroup;
-			children = (
-				873CD63D1C434A790051A1B6 /* MainNavigationController.swift */,
-				8740ECE91C3FA998001F2E8B /* ViewController.swift */,
-			);
-			name = C;
-			sourceTree = "<group>";
-		};
-		8732566A1C448CE700B8E77F /* M */ = {
-			isa = PBXGroup;
-			children = (
-				873CD6471C4382340051A1B6 /* ViewModel.swift */,
-			);
-			name = M;
-			sourceTree = "<group>";
-		};
 		8732566E1C448D6700B8E77F /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,14 +135,6 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
-		873256701C44914B00B8E77F /* V */ = {
-			isa = PBXGroup;
-			children = (
-				873256711C44917D00B8E77F /* MainCell.swift */,
-			);
-			name = V;
-			sourceTree = "<group>";
-		};
 		873CD63B1C434A450051A1B6 /* LogSystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,12 +148,14 @@
 		873CD63C1C434A560051A1B6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				879B35271C45FACC00383F41 /* OpenDoor */,
+				873256711C44917D00B8E77F /* MainCell.swift */,
+				873CD6471C4382340051A1B6 /* ViewModel.swift */,
+				873CD63D1C434A790051A1B6 /* MainNavigationController.swift */,
+				8740ECE91C3FA998001F2E8B /* ViewController.swift */,
 				87BCB36B1C45E74000291CE9 /* UserInfo */,
 				877C4DCE1C449D8300CFE731 /* ServerInfo */,
 				87BCB3501C44CC1F00291CE9 /* DeviceList */,
-				873256701C44914B00B8E77F /* V */,
-				8732566A1C448CE700B8E77F /* M */,
-				873256691C448CDB00B8E77F /* C */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -239,70 +220,39 @@
 		877C4DCE1C449D8300CFE731 /* ServerInfo */ = {
 			isa = PBXGroup;
 			children = (
-				877C4DD31C449DCD00CFE731 /* V */,
-				877C4DD21C449DC800CFE731 /* M */,
-				877C4DD11C449DC100CFE731 /* C */,
+				877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */,
+				877C4DD81C449EA200CFE731 /* ServerInfoDataFrame.swift */,
+				877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */,
 			);
 			name = ServerInfo;
 			sourceTree = "<group>";
 		};
-		877C4DD11C449DC100CFE731 /* C */ = {
+		879B35271C45FACC00383F41 /* OpenDoor */ = {
 			isa = PBXGroup;
 			children = (
-				877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */,
 			);
-			name = C;
+			name = OpenDoor;
 			sourceTree = "<group>";
 		};
-		877C4DD21C449DC800CFE731 /* M */ = {
+		879B352A1C46025B00383F41 /* DeviceDetail */ = {
 			isa = PBXGroup;
 			children = (
-				877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */,
-				877C4DD81C449EA200CFE731 /* ServerInfoDataFrame.swift */,
+				879B352B1C46027E00383F41 /* DeviceDetailViewController.swift */,
+				879B352D1C461BED00383F41 /* DeviceDetailViewModel.swift */,
 			);
-			name = M;
-			sourceTree = "<group>";
-		};
-		877C4DD31C449DCD00CFE731 /* V */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = V;
+			name = DeviceDetail;
 			sourceTree = "<group>";
 		};
 		87BCB3501C44CC1F00291CE9 /* DeviceList */ = {
 			isa = PBXGroup;
 			children = (
-				87BCB3551C44CE7A00291CE9 /* C */,
-				87BCB3541C44CE7500291CE9 /* V */,
-				87BCB3531C44CE7000291CE9 /* M */,
-			);
-			name = DeviceList;
-			sourceTree = "<group>";
-		};
-		87BCB3531C44CE7000291CE9 /* M */ = {
-			isa = PBXGroup;
-			children = (
+				879B352A1C46025B00383F41 /* DeviceDetail */,
 				87BCB3561C44CE8F00291CE9 /* DeviceListViewModel.swift */,
 				87BCB3691C45E33400291CE9 /* Device.swift */,
-				87BCB3581C44CF3A00291CE9 /* DeviceListShema.swift */,
-			);
-			name = M;
-			sourceTree = "<group>";
-		};
-		87BCB3541C44CE7500291CE9 /* V */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = V;
-			sourceTree = "<group>";
-		};
-		87BCB3551C44CE7A00291CE9 /* C */ = {
-			isa = PBXGroup;
-			children = (
 				87BCB3511C44CC4200291CE9 /* DeviceListViewController.swift */,
+				879B35281C45FBB600383F41 /* DeviceCell.swift */,
 			);
-			name = C;
+			name = DeviceList;
 			sourceTree = "<group>";
 		};
 		87BCB36B1C45E74000291CE9 /* UserInfo */ = {
@@ -474,12 +424,13 @@
 				873CD63E1C434A790051A1B6 /* MainNavigationController.swift in Sources */,
 				873CD6481C4382340051A1B6 /* ViewModel.swift in Sources */,
 				877C4DD51C449DF000CFE731 /* ServerInfoViewModel.swift in Sources */,
+				879B352E1C461BED00383F41 /* DeviceDetailViewModel.swift in Sources */,
 				873CD64E1C439F2B0051A1B6 /* LoginViewModel.swift in Sources */,
-				87BCB3591C44CF3A00291CE9 /* DeviceListShema.swift in Sources */,
 				877C4DD01C449DB800CFE731 /* ServerInfoViewController.swift in Sources */,
 				8740ED0F1C3FAE67001F2E8B /* LoginViewController.swift in Sources */,
 				8740ECEA1C3FA998001F2E8B /* ViewController.swift in Sources */,
 				873256721C44917D00B8E77F /* MainCell.swift in Sources */,
+				879B352C1C46027E00383F41 /* DeviceDetailViewController.swift in Sources */,
 				873CD6441C4354050051A1B6 /* NetworkManager.swift in Sources */,
 				8740ED0D1C3FAE09001F2E8B /* LoginNavigationController.swift in Sources */,
 				8740ECE81C3FA998001F2E8B /* AppDelegate.swift in Sources */,
@@ -489,6 +440,7 @@
 				8732566C1C448D4300B8E77F /* DataSource.swift in Sources */,
 				877C4DD91C449EA200CFE731 /* ServerInfoDataFrame.swift in Sources */,
 				87BCB36F1C45E8D700291CE9 /* UserInfoViewModel.swift in Sources */,
+				879B35291C45FBB600383F41 /* DeviceCell.swift in Sources */,
 				873CD6411C434C790051A1B6 /* UserCenter.swift in Sources */,
 				87BCB36D1C45E75B00291CE9 /* UserInfoViewController.swift in Sources */,
 				87BCB3711C45E8FC00291CE9 /* User.swift in Sources */,

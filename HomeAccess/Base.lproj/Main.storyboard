@@ -78,6 +78,24 @@
             </objects>
             <point key="canvasLocation" x="2587" y="-398"/>
         </scene>
+        <!--Device Detail View Controller-->
+        <scene sceneID="B26-5v-3Qv">
+            <objects>
+                <viewController storyboardIdentifier="DeviceDetailViewController" id="cfH-9a-cyR" customClass="DeviceDetailViewController" customModule="HomeAccess" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4HS-pG-IvJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="840-Ui-0UL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UZc-JV-YkP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b5I-rM-oNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3285" y="-389"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tfg-DP-b31">
             <objects>

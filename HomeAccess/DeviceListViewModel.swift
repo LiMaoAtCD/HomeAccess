@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 import PKHUD
 class DeviceListViewModel: NSObject {
-    var devices:[Device]? = [Device]()
+    var devices:[Device] = [Device]()
     func fetchDeviceList(success:successBlock) {
         
         NetworkManager.GetDeviceList { (json, error) -> Void in
@@ -38,17 +38,21 @@ class DeviceListViewModel: NSObject {
                         device.btmac = obj["BTMAC"].stringValue
                         
                         
-                        self.devices?.append(device)
+                        self.devices.append(device)
                     }
                     
                     try! realm.write {
-                        realm.add(self.devices!, update: true)
+                        realm.add(self.devices, update: true)
                         
                     }
                     print("device list save success")
                     PKHUD.sharedHUD.contentView = PKHUDSuccessView()
                     PKHUD.sharedHUD.show()
                     PKHUD.sharedHUD.hide(afterDelay: 2.0);
+                    
+             
+                    
+                    
                 }
                 success(true)
 
@@ -56,16 +60,4 @@ class DeviceListViewModel: NSObject {
         }
     }
 }
-//    {
-//    "ID": "ttttt"
-//    "NAME": "测试机1"
-//    "ENABLE": 1
-//    "FUNCTION": "11111111111111"
-//    "CHANNEL": 1
-//    "ACTIVE": "2015-12-04 12:13:14"
-//    "GPS": "130,24"
-//    "MODE": 0
-//    "VER": "0.99"
-//    "MEMORY": "测试机"
-//    "BTMAC": "00:15:83:00:42:E9"
-//    }
+
