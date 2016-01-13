@@ -60,6 +60,24 @@
             </objects>
             <point key="canvasLocation" x="2131" y="-381"/>
         </scene>
+        <!--User Info View Controller-->
+        <scene sceneID="Mwy-fo-fn2">
+            <objects>
+                <viewController storyboardIdentifier="UserInfoViewController" id="gr3-HL-Nm6" customClass="UserInfoViewController" customModule="HomeAccess" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OsQ-67-P8h"/>
+                        <viewControllerLayoutGuide type="bottom" id="XvC-Ph-p40"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oi5-AL-cAg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wQb-wh-qGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2587" y="-398"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tfg-DP-b31">
             <objects>

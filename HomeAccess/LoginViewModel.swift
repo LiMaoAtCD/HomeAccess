@@ -20,7 +20,7 @@ class LoginViewModel: NSObject {
 //            if let _ = error {
 //                success(false)
 //            } else{
-//                success(true)
+                success(true)
 //            }
 //        }
     }

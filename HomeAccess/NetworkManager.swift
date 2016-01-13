@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-
+import PKHUD
 
 let URLString = "http://120.24.208.181:89/gw.aspx"
 typealias CompletionHandler = (JSON?, NSError?) -> Void
@@ -24,15 +24,24 @@ class NetworkManager: NSObject {
         }
     }
 
-    //    请求设备列表与获取设备状态
+    //请求设备列表与获取设备状态
     class func GetDeviceList(completionhandler: CompletionHandler){
         Alamofire.request(.POST, URLString, parameters: ["KEY":"","COMMAND":"GetDeviceList","DATA":""], encoding: .URL, headers: nil).responseJSON { (response) -> Void in
             self.handleResponseJSON(response, completionhandler: completionhandler)
         }
     }
     //维护用户信息
-    class func USERINFO(userid: String, username: String, phone: String, password: String, BTkey: String, completionHandler:CompletionHandler) {
-        Alamofire.request(.POST, URLString, parameters: ["KEY":"","COMMAND":"USERINFO","DATA":self.convertDictionaryToJSON(["USERID":"","USERNAME":"","PHONE":"","PASSWORD":"","BTKEY":""])], encoding: .URL, headers: nil).responseJSON { (response) -> Void in
+    class func USERINFO(userid: String, username: String?, phone: String?, password: String?, BTkey: String? ,MODE: Int, completionHandler:CompletionHandler) {
+        var dic = [String: AnyObject]()
+        dic["USERID"] = userid
+        dic["USERNAME"] = username
+        dic["PHONE"] = phone
+        dic["PASSWORD"] = password
+        dic["BTKEY"] = BTkey
+        dic["MODE"] = MODE
+        
+        print(dic)
+        Alamofire.request(.POST, URLString, parameters: ["KEY":"","COMMAND":"USERINFO","DATA":self.convertDictionaryToJSON(dic)], encoding: .URL, headers: nil).responseJSON { (response) -> Void in
             self.handleResponseJSON(response, completionhandler: completionHandler)
         }
     }

@@ -12,7 +12,7 @@ class ServerInfoViewModel: NSObject {
     
     var dataFrame: ServerInfoDataFrame = ServerInfoDataFrame(version: "", day: -1, url: "")
     func fetchServerInfo(success: successBlock) {
-        NetworkManager.fetchServerStatus { (result, error) -> Void in
+        NetworkManager.INFO { (result, error) -> Void in
             if let _ = error {
                 success(false)
             } else{

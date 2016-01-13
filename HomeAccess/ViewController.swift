@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate {
         self.view.backgroundColor = UIColor.whiteColor()
         self.title = "开门吧"
 
-        viewModel = ViewModel(items: ["获取服务器信息","设备列表与状态"])
+        viewModel = ViewModel(items: ["获取服务器信息","设备列表与状态","维护用户信息"])
         self.configureTableView()
         
     }
@@ -49,20 +49,25 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
-        
-//        let item = self.dataSource.itemForIndexPath(indexPath)
-        
-        
-        if indexPath.row == 0 {
-            
-            let serverInfoVC = ServerInfoViewController.initialFromStoryBoard() as! ServerInfoViewController
-            self.navigationController?.showViewController(serverInfoVC, sender: self)
 
-        } else if indexPath.row == 1 {
-            let devicelistVC = DeviceListViewController.initialFromStoryBoard() as! DeviceListViewController
-            self.navigationController?.showViewController(devicelistVC, sender: self)
+        
+        var vc: UIViewController!
+        switch indexPath.row {
+            
+        
+        case 0:
+             vc = ServerInfoViewController.initialFromStoryBoard() as! ServerInfoViewController
+        case 1:
+             vc = DeviceListViewController.initialFromStoryBoard() as! DeviceListViewController
+        case 2:
+             vc = UserInfoViewController.initialFromStoryBoard() as! UserInfoViewController
+            
+        default:
+            assertionFailure("should not selected")
         }
         
+        self.navigationController?.showViewController(vc, sender: self)
+
         
     }
 
