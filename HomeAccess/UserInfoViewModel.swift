@@ -11,7 +11,7 @@ import UIKit
 class UserInfoViewModel: NSObject {
 
     
-    func addUser(success:successBlock){
+    func addUser(success:completionHandler){
         let user = User()
         user.userid = "userid"
         user.username = "limao"
@@ -28,7 +28,7 @@ class UserInfoViewModel: NSObject {
         }
     }
     
-    func deleteUser(userid: String, success: successBlock) {
+    func deleteUser(userid: String, success: completionHandler) {
         NetworkManager.USERINFO(userid, username: nil, phone: nil, password: nil, BTkey: nil, MODE: 1) { (json, error) -> Void in
             print("\(json) && \(error)")
         }

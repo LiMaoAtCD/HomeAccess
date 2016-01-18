@@ -37,6 +37,8 @@
 		8749B9A51C4CC27F0000E13E /* JVFloatLabeledText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8749B9A41C4CC27F0000E13E /* JVFloatLabeledText.framework */; };
 		8749B9A61C4CC28C0000E13E /* JVFloatLabeledText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8749B9A41C4CC27F0000E13E /* JVFloatLabeledText.framework */; };
 		8749B9A71C4CC28C0000E13E /* JVFloatLabeledText.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8749B9A41C4CC27F0000E13E /* JVFloatLabeledText.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8749B9AE1C4CC8C80000E13E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8749B9AD1C4CC8C80000E13E /* RegisterViewController.swift */; };
+		8749B9B11C4CC96A0000E13E /* ForgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8749B9B01C4CC96A0000E13E /* ForgetViewController.swift */; };
 		877C4DD01C449DB800CFE731 /* ServerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */; };
 		877C4DD51C449DF000CFE731 /* ServerInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */; };
 		877C4DD91C449EA200CFE731 /* ServerInfoDataFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DD81C449EA200CFE731 /* ServerInfoDataFrame.swift */; };
@@ -50,6 +52,9 @@
 		87BCB36D1C45E75B00291CE9 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB36C1C45E75B00291CE9 /* UserInfoViewController.swift */; };
 		87BCB36F1C45E8D700291CE9 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB36E1C45E8D700291CE9 /* UserInfoViewModel.swift */; };
 		87BCB3711C45E8FC00291CE9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB3701C45E8FC00291CE9 /* User.swift */; };
+		87CF4E8C1C4CD0AD007748FE /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CF4E8B1C4CD0AD007748FE /* Utility.m */; };
+		87CF4E8E1C4CD506007748FE /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF4E8D1C4CD506007748FE /* RegisterViewModel.swift */; };
+		87CF4E901C4CE6C2007748FE /* ForgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF4E8F1C4CE6C2007748FE /* ForgetViewModel.swift */; };
 		D9D2CD20359A82CF9C843B3B /* Pods_HomeAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A6DBD8CB4E17F428994822 /* Pods_HomeAccess.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +103,9 @@
 		8740ED0E1C3FAE67001F2E8B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8749B9A01C4CB52E0000E13E /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		8749B9A41C4CC27F0000E13E /* JVFloatLabeledText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JVFloatLabeledText.framework; path = Carthage/Build/iOS/JVFloatLabeledText.framework; sourceTree = "<group>"; };
+		8749B9A81C4CC3C00000E13E /* HomeAccess-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeAccess-Bridging-Header.h"; sourceTree = "<group>"; };
+		8749B9AD1C4CC8C80000E13E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8749B9B01C4CC96A0000E13E /* ForgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetViewController.swift; sourceTree = "<group>"; };
 		877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewController.swift; sourceTree = "<group>"; };
 		877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewModel.swift; sourceTree = "<group>"; };
 		877C4DD81C449EA200CFE731 /* ServerInfoDataFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoDataFrame.swift; sourceTree = "<group>"; };
@@ -111,6 +119,10 @@
 		87BCB36C1C45E75B00291CE9 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		87BCB36E1C45E8D700291CE9 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
 		87BCB3701C45E8FC00291CE9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		87CF4E8A1C4CD0AD007748FE /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		87CF4E8B1C4CD0AD007748FE /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		87CF4E8D1C4CD506007748FE /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		87CF4E8F1C4CE6C2007748FE /* ForgetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetViewModel.swift; sourceTree = "<group>"; };
 		E8A6DBD8CB4E17F428994822 /* Pods_HomeAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F60D55F0A77B3C61CB75B0 /* Pods-HomeAccess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeAccess.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeAccess/Pods-HomeAccess.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				8732566B1C448D4300B8E77F /* DataSource.swift */,
+				87CF4E8A1C4CD0AD007748FE /* Utility.h */,
+				87CF4E8B1C4CD0AD007748FE /* Utility.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -154,6 +168,8 @@
 		873CD63B1C434A450051A1B6 /* LogSystem */ = {
 			isa = PBXGroup;
 			children = (
+				8749B9AF1C4CC95D0000E13E /* ForgetPassword */,
+				8749B9AC1C4CC8B40000E13E /* Register */,
 				8740ED0C1C3FAE09001F2E8B /* LoginNavigationController.swift */,
 				8740ED0E1C3FAE67001F2E8B /* LoginViewController.swift */,
 				873CD64D1C439F2B0051A1B6 /* LoginViewModel.swift */,
@@ -225,6 +241,7 @@
 				8732566E1C448D6700B8E77F /* Vendor */,
 				873CD6421C4353D00051A1B6 /* NetworkManager */,
 				873CD63F1C434C480051A1B6 /* UserCenter */,
+				8749B9A81C4CC3C00000E13E /* HomeAccess-Bridging-Header.h */,
 				8740ECE71C3FA998001F2E8B /* AppDelegate.swift */,
 				873CD63C1C434A560051A1B6 /* Main */,
 				873CD63B1C434A450051A1B6 /* LogSystem */,
@@ -234,6 +251,24 @@
 				8740ECF31C3FA998001F2E8B /* Info.plist */,
 			);
 			path = HomeAccess;
+			sourceTree = "<group>";
+		};
+		8749B9AC1C4CC8B40000E13E /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				8749B9AD1C4CC8C80000E13E /* RegisterViewController.swift */,
+				87CF4E8D1C4CD506007748FE /* RegisterViewModel.swift */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		8749B9AF1C4CC95D0000E13E /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				8749B9B01C4CC96A0000E13E /* ForgetViewController.swift */,
+				87CF4E8F1C4CE6C2007748FE /* ForgetViewModel.swift */,
+			);
+			name = ForgetPassword;
 			sourceTree = "<group>";
 		};
 		877C4DCE1C449D8300CFE731 /* ServerInfo */ = {
@@ -457,17 +492,22 @@
 				8740ED0F1C3FAE67001F2E8B /* LoginViewController.swift in Sources */,
 				8740ECEA1C3FA998001F2E8B /* ViewController.swift in Sources */,
 				873256721C44917D00B8E77F /* MainCell.swift in Sources */,
+				8749B9B11C4CC96A0000E13E /* ForgetViewController.swift in Sources */,
 				879B352C1C46027E00383F41 /* DeviceDetailViewController.swift in Sources */,
 				873CD6441C4354050051A1B6 /* NetworkManager.swift in Sources */,
 				8740ED0D1C3FAE09001F2E8B /* LoginNavigationController.swift in Sources */,
+				87CF4E8C1C4CD0AD007748FE /* Utility.m in Sources */,
 				8740ECE81C3FA998001F2E8B /* AppDelegate.swift in Sources */,
 				87BCB36A1C45E33400291CE9 /* Device.swift in Sources */,
 				87BCB3521C44CC4200291CE9 /* DeviceListViewController.swift in Sources */,
 				87BCB3571C44CE8F00291CE9 /* DeviceListViewModel.swift in Sources */,
+				8749B9AE1C4CC8C80000E13E /* RegisterViewController.swift in Sources */,
 				8732566C1C448D4300B8E77F /* DataSource.swift in Sources */,
+				87CF4E901C4CE6C2007748FE /* ForgetViewModel.swift in Sources */,
 				877C4DD91C449EA200CFE731 /* ServerInfoDataFrame.swift in Sources */,
 				87BCB36F1C45E8D700291CE9 /* UserInfoViewModel.swift in Sources */,
 				879B35311C47428600383F41 /* Extensions.swift in Sources */,
+				87CF4E8E1C4CD506007748FE /* RegisterViewModel.swift in Sources */,
 				879B35291C45FBB600383F41 /* DeviceCell.swift in Sources */,
 				873CD6411C434C790051A1B6 /* UserCenter.swift in Sources */,
 				87BCB36D1C45E75B00291CE9 /* UserInfoViewController.swift in Sources */,
@@ -583,6 +623,7 @@
 			baseConfigurationReference = 1E902D471288645AB52373ED /* Pods-HomeAccess.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -592,6 +633,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MarcoLi.HomeAccess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HomeAccess/HomeAccess-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -600,6 +643,7 @@
 			baseConfigurationReference = F0F60D55F0A77B3C61CB75B0 /* Pods-HomeAccess.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -609,6 +653,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MarcoLi.HomeAccess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HomeAccess/HomeAccess-Bridging-Header.h";
 			};
 			name = Release;
 		};

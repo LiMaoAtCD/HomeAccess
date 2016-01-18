@@ -13,7 +13,7 @@ import PKHUD
 class ServerInfoViewModel: NSObject {
     
     var dataFrame: ServerInfoDataFrame = ServerInfoDataFrame(version: "", day: -1, url: "")
-    func fetchServerInfo(success: successBlock) {
+    func fetchServerInfo(success: completionHandler) {
         
         PKHUD.sharedHUD.contentView = PKHUDStatusView(title: "获取服务器信息", subtitle: nil, image: nil)
         PKHUD.sharedHUD.show()

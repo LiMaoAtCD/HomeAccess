@@ -8,13 +8,28 @@
 
 import UIKit
 
-typealias successBlock = (Bool) -> Void
+enum LoginError: ErrorType {
+    case InvalidCellphone
+    case InvalidPassword
+    case ResponseInvalid
+}
+
+typealias completionHandler = (Bool) -> Void
 
 class LoginViewModel: NSObject {
     var username: String?
     var password: String?
     
-    func login(success:successBlock){
+    func login(success:completionHandler){
+        
+        //1.验证手机号密码合法性
+        
+        let validNumber = Utility.isMobileNumber(username)
+        
+//        let validePassword = Utility
+        
+        
+        
 //        NetworkManager.login("18900000000", password: "111111") { (data, error) -> Void in
 //            print("data:\(data) & error: \(error)")
 //            
@@ -25,4 +40,7 @@ class LoginViewModel: NSObject {
 //            }
 //        }
     }
+    
+    
+    
 }

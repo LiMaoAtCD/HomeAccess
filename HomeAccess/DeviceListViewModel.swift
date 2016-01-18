@@ -11,7 +11,7 @@ import RealmSwift
 import PKHUD
 class DeviceListViewModel: NSObject {
     var devices:[Device] = [Device]()
-    func fetchDeviceList(success:successBlock) {
+    func fetchDeviceList(success:completionHandler) {
         
         NetworkManager.GetDeviceList { (json, error) -> Void in
             if let _ = error {

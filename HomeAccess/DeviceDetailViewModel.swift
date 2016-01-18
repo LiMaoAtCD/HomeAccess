@@ -14,7 +14,7 @@ class DeviceDetailViewModel: NSObject {
 
     
     
-    func openDoor(success: successBlock) {
+    func openDoor(success: completionHandler) {
         NetworkManager.Open(device.ID!, channel: device.channel, user: "11111", message: "welcome", mode: "0") { (json, error) -> Void in
             print("\(json)")
             

@@ -8,23 +8,24 @@
 
 import UIKit
 import SnapKit
-
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     var viewmodel: LoginViewModel! = LoginViewModel()
     
-    var cellphoneNumberTextField: UITextField!
-    var passwordTextField: UITextField!
+    var cellphoneNumberTextField: JVFloatLabeledTextField!
+    var passwordTextField: JVFloatLabeledTextField!
     var forgetPasswordButton: UIButton!
     var registerButton: UIButton!
     var loginButton: UIButton!
     
+    let horizontalMargin = 20.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.fd_prefersNavigationBarHidden = true
         setUpViews()
         
-        self.view.backgroundColor = UIColor.blueColor()
     }
     
     //MARK: 配置视图
@@ -35,20 +36,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         setUpForgetButton()
         setUpRegisterButton()
         setUpLoginButton()
+        
+        setUpGesture()
+    }
+    
+    private func setUpGesture() {
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: "closeKeyboard")
+        self.view.addGestureRecognizer(tapGesture)
     }
     
     private func setUpPhoneNumberTextField() {
         
-        cellphoneNumberTextField = UITextField()
+        cellphoneNumberTextField = JVFloatLabeledTextField()
         cellphoneNumberTextField.delegate = self
-        cellphoneNumberTextField.addTarget(self, action: "cellphoneTextFieldEditingChanged", forControlEvents: UIControlEvents.EditingChanged)
-        cellphoneNumberTextField.placeholder = "手机号"
+        cellphoneNumberTextField.keyboardType = UIKeyboardType.NumberPad
+        cellphoneNumberTextField.addTarget(self, action: "cellphoneTextFieldEditingChanged:", forControlEvents: UIControlEvents.EditingChanged)
+        cellphoneNumberTextField.placeholder = "手机号码"
         view.addSubview(cellphoneNumberTextField)
         
         
         cellphoneNumberTextField.snp_makeConstraints { (make) -> Void in
-            make.left.equalTo(view.snp_left).offset(50)
-            make.right.equalTo(view.snp_left).offset(-50)
+            make.left.equalTo(view.snp_left).offset(horizontalMargin)
+            make.trailing.equalTo(view.snp_trailing).offset(-horizontalMargin)
             make.height.equalTo(40)
             make.centerY.equalTo(view.snp_centerY).multipliedBy(0.5)
         }
@@ -56,18 +66,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     private func setUpPasswordTextField() {
         
-        passwordTextField = UITextField()
+        passwordTextField = JVFloatLabeledTextField()
         passwordTextField.delegate = self
-        passwordTextField.addTarget(self, action: "passwordTextFieldEditingChanged", forControlEvents: UIControlEvents.EditingChanged)
+        passwordTextField.addTarget(self, action: "passwordTextFieldEditingChanged:", forControlEvents: UIControlEvents.EditingChanged)
         passwordTextField.placeholder = "密码"
-
+        passwordTextField.secureTextEntry = true
         view.addSubview(passwordTextField)
         
         passwordTextField.snp_makeConstraints { (make) -> Void in
             make.left.equalTo(cellphoneNumberTextField)
             make.right.equalTo(cellphoneNumberTextField)
             make.height.equalTo(cellphoneNumberTextField)
-            make.centerY.equalTo(cellphoneNumberTextField.snp_bottom).offset(20)
+        make.centerY.equalTo(cellphoneNumberTextField.snp_bottom).offset(20)
         }
     }
     
@@ -75,15 +85,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         forgetPasswordButton = UIButton()
         forgetPasswordButton.setTitle("忘记密码?", forState: UIControlState.Normal)
+        forgetPasswordButton.setTitleColor(UIColor.greenColor(), forState: .Normal)
         forgetPasswordButton.setTitle("忘记密码?", forState: .Highlighted)
-        forgetPasswordButton.addTarget(self, action: "forgetPassword:", forControlEvents: .TouchUpInside)
+        forgetPasswordButton.addTarget(self, action: "forgetPassword", forControlEvents: .TouchUpInside)
         
         self.view.addSubview(forgetPasswordButton)
         
         forgetPasswordButton.snp_makeConstraints { (make) -> Void in
             make.right.equalTo(cellphoneNumberTextField.snp_right)
             make.height.equalTo(40)
-            make.width.equalTo(200)
             make.top.equalTo(passwordTextField.snp_bottom).offset(20)
         }
     }
@@ -93,7 +103,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         registerButton = UIButton()
         registerButton.setTitle("注册", forState: UIControlState.Normal)
         registerButton.setTitle("注册", forState: .Highlighted)
-        registerButton.addTarget(self, action: "register:", forControlEvents: .TouchUpInside)
+        registerButton.setTitleColor(UIColor.greenColor(), forState: .Normal)
+
+        registerButton.addTarget(self, action: "register", forControlEvents: .TouchUpInside)
         
         self.view.addSubview(registerButton)
         
@@ -106,20 +118,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func setUpLoginButton() {
-        registerButton = UIButton()
-        registerButton.setTitle("登录", forState: UIControlState.Normal)
-        registerButton.setTitle("登录", forState: .Highlighted)
-        registerButton.addTarget(self, action: "login:", forControlEvents: .TouchUpInside)
+        loginButton = UIButton()
         
-        self.view.addSubview(registerButton)
-        
-        let loginButton = UIButton(type: .Custom)
+        loginButton.layer.cornerRadius = 50.0
+        loginButton.layer.masksToBounds = true
+        loginButton.backgroundColor = UIColor.greenColor()
         loginButton.setTitle("登录", forState: UIControlState.Normal)
+        loginButton.setTitle("登录", forState: .Highlighted)
         loginButton.addTarget(self, action: "login", forControlEvents: .TouchUpInside)
-        view.addSubview(loginButton)
+        
+        self.view.addSubview(loginButton)
+
         loginButton.snp_makeConstraints { (make) -> Void in
             make.width.equalTo(100)
-            make.height.equalTo(45)
+            make.height.equalTo(100)
             make.centerY.equalTo(view.snp_centerY).offset(1.5)
             make.centerX.equalTo(view.snp_centerX)
         }
@@ -127,7 +139,34 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
   
 //    MARK: 点击事件处理
-    private func login(){
+    
+    //
+    @objc private func cellphoneTextFieldEditingChanged(textField: UITextField){
+        viewmodel.username = textField.text
+    }
+    
+    @objc private func passwordTextFieldEditingChanged(textField: UITextField) {
+        viewmodel.password = textField.text
+    }
+    
+    @objc private func register() {
+        
+        let registerVC = RegisterViewController.initialFromStoryBoard() as! RegisterViewController
+        
+        self.navigationController?.showViewController(registerVC, sender: self)
+    }
+    
+    @objc private func forgetPassword(){
+    
+        let forgetPasswordVC = ForgetViewController.initialFromStoryBoard() as! ForgetViewController
+        
+        self.navigationController?.showViewController(forgetPasswordVC, sender: self)
+    }
+
+    @objc private func login(){
+        
+        
+    
         viewmodel.login { (success) -> Void in
             if success {
 //                UserCenter.setLogin(true)
@@ -138,16 +177,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
 
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @objc private func closeKeyboard(){
+        
+        for subview in self.view.subviews {
+            if subview is UITextField {
+                subview.resignFirstResponder()
+            }
+        }
     }
-    */
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
