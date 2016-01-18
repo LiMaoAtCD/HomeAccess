@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
 
-        let mainVC = ViewController()
+        let mainVC = ViewController.initialFromStoryBoard() as! ViewController
         mainNavigationVC = MainNavigationController(rootViewController: mainVC)
         
         let login = UserCenter.login()
@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = mainNavigationVC
         } else{
             
-            let loginVC = LoginViewController()
+            let loginVC = LoginViewController.initialFromStoryBoard() as! LoginViewController
             let loginNavigationController = LoginNavigationController(rootViewController: loginVC)
             
             window?.rootViewController = loginNavigationController

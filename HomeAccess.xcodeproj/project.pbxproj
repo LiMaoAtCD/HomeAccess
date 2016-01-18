@@ -34,6 +34,9 @@
 		8749B9A11C4CB52E0000E13E /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8749B9A01C4CB52E0000E13E /* SVProgressHUD.framework */; };
 		8749B9A21C4CB5390000E13E /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8749B9A01C4CB52E0000E13E /* SVProgressHUD.framework */; };
 		8749B9A31C4CB5390000E13E /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8749B9A01C4CB52E0000E13E /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8749B9A51C4CC27F0000E13E /* JVFloatLabeledText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8749B9A41C4CC27F0000E13E /* JVFloatLabeledText.framework */; };
+		8749B9A61C4CC28C0000E13E /* JVFloatLabeledText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8749B9A41C4CC27F0000E13E /* JVFloatLabeledText.framework */; };
+		8749B9A71C4CC28C0000E13E /* JVFloatLabeledText.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8749B9A41C4CC27F0000E13E /* JVFloatLabeledText.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		877C4DD01C449DB800CFE731 /* ServerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */; };
 		877C4DD51C449DF000CFE731 /* ServerInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */; };
 		877C4DD91C449EA200CFE731 /* ServerInfoDataFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DD81C449EA200CFE731 /* ServerInfoDataFrame.swift */; };
@@ -59,6 +62,7 @@
 			files = (
 				8749B9A31C4CB5390000E13E /* SVProgressHUD.framework in Embed Frameworks */,
 				8740ECFE1C3FAD0B001F2E8B /* SwiftyJSON.framework in Embed Frameworks */,
+				8749B9A71C4CC28C0000E13E /* JVFloatLabeledText.framework in Embed Frameworks */,
 				8740ED021C3FAD0B001F2E8B /* Alamofire.framework in Embed Frameworks */,
 				8740ED041C3FAD0B001F2E8B /* RealmSwift.framework in Embed Frameworks */,
 				8740ED001C3FAD0B001F2E8B /* SnapKit.framework in Embed Frameworks */,
@@ -93,6 +97,7 @@
 		8740ED0C1C3FAE09001F2E8B /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		8740ED0E1C3FAE67001F2E8B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8749B9A01C4CB52E0000E13E /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
+		8749B9A41C4CC27F0000E13E /* JVFloatLabeledText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JVFloatLabeledText.framework; path = Carthage/Build/iOS/JVFloatLabeledText.framework; sourceTree = "<group>"; };
 		877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewController.swift; sourceTree = "<group>"; };
 		877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewModel.swift; sourceTree = "<group>"; };
 		877C4DD81C449EA200CFE731 /* ServerInfoDataFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoDataFrame.swift; sourceTree = "<group>"; };
@@ -115,11 +120,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8749B9A61C4CC28C0000E13E /* JVFloatLabeledText.framework in Frameworks */,
 				8749B9A11C4CB52E0000E13E /* SVProgressHUD.framework in Frameworks */,
 				8740ECFD1C3FAD0B001F2E8B /* SwiftyJSON.framework in Frameworks */,
 				8749B9A21C4CB5390000E13E /* SVProgressHUD.framework in Frameworks */,
 				8740ED011C3FAD0B001F2E8B /* Alamofire.framework in Frameworks */,
 				8740ED031C3FAD0B001F2E8B /* RealmSwift.framework in Frameworks */,
+				8749B9A51C4CC27F0000E13E /* JVFloatLabeledText.framework in Frameworks */,
 				8740ECFF1C3FAD0B001F2E8B /* SnapKit.framework in Frameworks */,
 				8740ED081C3FAD75001F2E8B /* Realm.framework in Frameworks */,
 				D9D2CD20359A82CF9C843B3B /* Pods_HomeAccess.framework in Frameworks */,
@@ -188,6 +195,7 @@
 		8740ECDB1C3FA998001F2E8B = {
 			isa = PBXGroup;
 			children = (
+				8749B9A41C4CC27F0000E13E /* JVFloatLabeledText.framework */,
 				8749B9A01C4CB52E0000E13E /* SVProgressHUD.framework */,
 				8740ED071C3FAD75001F2E8B /* Realm.framework */,
 				8740ECF91C3FAD0B001F2E8B /* SwiftyJSON.framework */,
@@ -580,6 +588,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = HomeAccess/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MarcoLi.HomeAccess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -596,6 +605,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = HomeAccess/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MarcoLi.HomeAccess;
 				PRODUCT_NAME = "$(TARGET_NAME)";

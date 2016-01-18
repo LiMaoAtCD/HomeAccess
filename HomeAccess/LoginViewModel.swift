@@ -9,6 +9,7 @@
 import UIKit
 
 typealias successBlock = (Bool) -> Void
+
 class LoginViewModel: NSObject {
     var username: String?
     var password: String?
