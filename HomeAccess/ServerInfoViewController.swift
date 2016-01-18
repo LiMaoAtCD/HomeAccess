@@ -23,27 +23,25 @@ class ServerInfoViewController: UIViewController {
         self.title = "服务器信息"
         configureStatusViews()
         
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         viewModel.fetchServerInfo { (success) -> Void in
-            
             if success {
-                
                 self.updateInfo()
-                
             }
         }
-        
     }
     
     func updateInfo() {
-        
         versionLabel.text = "Version: " + viewModel.dataFrame.version
         outOfDateLabel.text = "过期时间: " + "\(viewModel.dataFrame.day)"
         urlLabel.text = "新服务器地址: " + viewModel.dataFrame.url
-
     }
     
     func configureStatusViews(){
-        
         versionLabel = UILabel()
         self.view.addSubview(versionLabel)
         

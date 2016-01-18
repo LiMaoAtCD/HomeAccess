@@ -37,6 +37,7 @@
 		879B35291C45FBB600383F41 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B35281C45FBB600383F41 /* DeviceCell.swift */; };
 		879B352C1C46027E00383F41 /* DeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B352B1C46027E00383F41 /* DeviceDetailViewController.swift */; };
 		879B352E1C461BED00383F41 /* DeviceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B352D1C461BED00383F41 /* DeviceDetailViewModel.swift */; };
+		879B35311C47428600383F41 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B35301C47428600383F41 /* Extensions.swift */; };
 		87BCB3521C44CC4200291CE9 /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB3511C44CC4200291CE9 /* DeviceListViewController.swift */; };
 		87BCB3571C44CE8F00291CE9 /* DeviceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB3561C44CE8F00291CE9 /* DeviceListViewModel.swift */; };
 		87BCB36A1C45E33400291CE9 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BCB3691C45E33400291CE9 /* Device.swift */; };
@@ -93,6 +94,7 @@
 		879B35281C45FBB600383F41 /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 		879B352B1C46027E00383F41 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewController.swift; sourceTree = "<group>"; };
 		879B352D1C461BED00383F41 /* DeviceDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewModel.swift; sourceTree = "<group>"; };
+		879B35301C47428600383F41 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		87BCB3511C44CC4200291CE9 /* DeviceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
 		87BCB3561C44CE8F00291CE9 /* DeviceListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListViewModel.swift; sourceTree = "<group>"; };
 		87BCB3691C45E33400291CE9 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		8740ECE61C3FA998001F2E8B /* HomeAccess */ = {
 			isa = PBXGroup;
 			children = (
+				879B352F1C47427500383F41 /* Extensions */,
 				8732566F1C448D7000B8E77F /* Util */,
 				8732566E1C448D6700B8E77F /* Vendor */,
 				873CD6421C4353D00051A1B6 /* NetworkManager */,
@@ -241,6 +244,14 @@
 				879B352D1C461BED00383F41 /* DeviceDetailViewModel.swift */,
 			);
 			name = DeviceDetail;
+			sourceTree = "<group>";
+		};
+		879B352F1C47427500383F41 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				879B35301C47428600383F41 /* Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		87BCB3501C44CC1F00291CE9 /* DeviceList */ = {
@@ -440,6 +451,7 @@
 				8732566C1C448D4300B8E77F /* DataSource.swift in Sources */,
 				877C4DD91C449EA200CFE731 /* ServerInfoDataFrame.swift in Sources */,
 				87BCB36F1C45E8D700291CE9 /* UserInfoViewModel.swift in Sources */,
+				879B35311C47428600383F41 /* Extensions.swift in Sources */,
 				879B35291C45FBB600383F41 /* DeviceCell.swift in Sources */,
 				873CD6411C434C790051A1B6 /* UserCenter.swift in Sources */,
 				87BCB36D1C45E75B00291CE9 /* UserInfoViewController.swift in Sources */,

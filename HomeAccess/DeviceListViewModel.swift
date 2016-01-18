@@ -21,7 +21,7 @@ class DeviceListViewModel: NSObject {
                 
                 if let arr = arrayValue {
                     let realm = try! Realm()
-
+                    self.devices.removeAll()
                     for obj in arr {
                         let device = Device()
                         device.version = obj["VER"].stringValue
@@ -43,9 +43,11 @@ class DeviceListViewModel: NSObject {
                     
                     try! realm.write {
                         realm.add(self.devices, update: true)
-                        
                     }
-                    print("device list save success")
+                    
+                    
+                    
+                    
                     PKHUD.sharedHUD.contentView = PKHUDSuccessView()
                     PKHUD.sharedHUD.show()
                     PKHUD.sharedHUD.hide(afterDelay: 2.0);

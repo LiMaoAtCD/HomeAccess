@@ -23,6 +23,16 @@ class DeviceListViewController: UIViewController, UITableViewDelegate {
 
         viewModel = DeviceListViewModel()
         configureViews()
+        
+        viewModel.fetchDeviceList { (success) -> Void in
+            if success {
+                self.dataSource.items = self.viewModel.devices
+                self.tableView.reloadData()
+            } else{
+                
+            }
+        }
+
     }
     
     func configureViews() {
@@ -48,18 +58,6 @@ class DeviceListViewController: UIViewController, UITableViewDelegate {
         tableView.tableFooterView = UIView()
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        viewModel.fetchDeviceList { (success) -> Void in
-            if success {
-//                print(self.viewModel.devices)
-                self.dataSource.items = self.viewModel.devices
-                self.tableView.reloadData()
-            } else{
-            }
-        }
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
