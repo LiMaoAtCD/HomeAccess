@@ -84,8 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-HomeAccess/ECSlidingViewController.framework"
+  install_framework "Pods-HomeAccess/FDFullscreenPopGesture.framework"
   install_framework "Pods-HomeAccess/PKHUD.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-HomeAccess/ECSlidingViewController.framework"
+  install_framework "Pods-HomeAccess/FDFullscreenPopGesture.framework"
   install_framework "Pods-HomeAccess/PKHUD.framework"
 fi

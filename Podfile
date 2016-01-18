@@ -5,5 +5,8 @@
 
 target 'HomeAccess' do
 	pod "PKHUD"
+    pod 'ECSlidingViewController', '~> 2.0.3'
+    pod 'FDFullscreenPopGesture', '1.1'
+
 end
 

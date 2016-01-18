@@ -1,10 +1,16 @@
 PODS:
+  - ECSlidingViewController (2.0.3)
+  - FDFullscreenPopGesture (1.1)
   - PKHUD (2.2.5)
 
 DEPENDENCIES:
+  - ECSlidingViewController (~> 2.0.3)
+  - FDFullscreenPopGesture (= 1.1)
   - PKHUD
 
 SPEC CHECKSUMS:
+  ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   PKHUD: 15d9db01fb008bb9247c6d785c585f587955b113
 
 COCOAPODS: 0.39.0
