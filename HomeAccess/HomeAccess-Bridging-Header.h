@@ -4,7 +4,7 @@
 
 #import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
 #import <ECSlidingViewController/ECSlidingViewController.h>
-//#import <JVFloatLabeledText/JVFloatLabeledTextField.h>
 #import <JVFloatLabeledText/JVFloatLabeledText.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "Utility.h"
+#import <ECSlidingViewController/ECSlidingViewController-umbrella.h>

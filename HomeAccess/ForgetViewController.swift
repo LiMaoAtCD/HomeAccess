@@ -10,6 +10,7 @@ import UIKit
 
 class ForgetViewController: UIViewController {
 
+    var viewModel: ForgetViewModel = ForgetViewModel()
     var phoneTextField: JVFloatLabeledTextField!
     var validateCodeTextField: JVFloatLabeledTextField!
     var passwordTextField: JVFloatLabeledTextField!
@@ -51,7 +52,6 @@ class ForgetViewController: UIViewController {
             make.height.equalTo(35)
             make.top.equalTo(self.snp_topLayoutGuideBottom).offset(20)
         }
-        
     }
     
     func setUpValidateTextField() {
@@ -118,6 +118,15 @@ class ForgetViewController: UIViewController {
     
     func textfieldDidEditingChanged(textfield: UITextField) {
         
+        if textfield == phoneTextField {
+            viewModel.phoneNumber = textfield.text
+        } else if textfield == validateCodeTextField {
+            viewModel.validateCode = textfield.text
+        } else if textfield == passwordTextField {
+            viewModel.password = textfield.text
+        } else {
+            viewModel.confirmPassword = textfield.text
+        }
     }
     
 

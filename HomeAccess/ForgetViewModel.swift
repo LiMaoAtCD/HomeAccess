@@ -9,5 +9,9 @@
 import UIKit
 
 class ForgetViewModel: NSObject {
-
+    var phoneNumber: String?
+    var validateCode: String?
+    var password: String?
+    var confirmPassword: String?
+    
 }

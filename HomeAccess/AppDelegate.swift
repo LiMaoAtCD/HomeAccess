@@ -13,19 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var mainNavigationVC: MainNavigationController!
+    var mainBottomVC: ECSlidingViewController!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
         
+        setupSlidingViewController()
 
-        let mainVC = ViewController.initialFromStoryBoard() as! ViewController
-        mainNavigationVC = MainNavigationController(rootViewController: mainVC)
-        
         let login = UserCenter.login()
         if login {
 
-            self.window?.rootViewController = mainNavigationVC
+            self.window?.rootViewController = self.mainBottomVC
         } else{
             
             let loginVC = LoginViewController.initialFromStoryBoard() as! LoginViewController
@@ -40,8 +37,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func setupSlidingViewController() {
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let viewController = ViewController.initialFromStoryBoard() as! ViewController
+        
+        let leftButton = UIButton(type: .Custom)
+        leftButton.setTitle("Left", forState: .Normal)
+        leftButton.setTitleColor(UIColor.redColor(), forState: .Normal)
+        leftButton.addTarget(self, action: "archorLeft", forControlEvents: .TouchUpInside)
+        leftButton.frame = CGRectMake(0, 0, 40, 30)
+        let leftBarItem = UIBarButtonItem(customView: leftButton)
+
+        viewController.navigationItem.title = "云门"
+        viewController.navigationItem.leftBarButtonItem  = leftBarItem
+        viewController.view.backgroundColor = UIColor.whiteColor()
+        
+        
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        
+        
+        mainBottomVC = ECSlidingViewController.slidingWithTopViewController(navigationController)
+        mainBottomVC.underLeftViewController  = MenuViewController.initialFromStoryBoard()
+        
+        // enable swiping on the top view
+        navigationController.view.addGestureRecognizer(self.mainBottomVC.panGesture)
+        
+        // configure anchored layout
+        mainBottomVC.anchorRightPeekAmount  = 100.0
+        mainBottomVC.anchorLeftRevealAmount = 250.0
+    }
+    
+    func archorLeft() {
+        self.mainBottomVC.anchorTopViewToRightAnimated(true)
+    }
+    
     func switchLoginVCToMain() {
-        self.window?.rootViewController = mainNavigationVC
+        self.window?.rootViewController = self.mainBottomVC
     }
 
     func applicationWillResignActive(application: UIApplication) {

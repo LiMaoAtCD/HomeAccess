@@ -31,6 +31,7 @@
 		8740ED091C3FAD75001F2E8B /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8740ED071C3FAD75001F2E8B /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8740ED0D1C3FAE09001F2E8B /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740ED0C1C3FAE09001F2E8B /* LoginNavigationController.swift */; };
 		8740ED0F1C3FAE67001F2E8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740ED0E1C3FAE67001F2E8B /* LoginViewController.swift */; };
+		874776131C4DD5DE00B63F72 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874776121C4DD5DE00B63F72 /* MenuTableViewCell.swift */; };
 		8749B9A11C4CB52E0000E13E /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8749B9A01C4CB52E0000E13E /* SVProgressHUD.framework */; };
 		8749B9A21C4CB5390000E13E /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8749B9A01C4CB52E0000E13E /* SVProgressHUD.framework */; };
 		8749B9A31C4CB5390000E13E /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8749B9A01C4CB52E0000E13E /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -55,6 +56,8 @@
 		87CF4E8C1C4CD0AD007748FE /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CF4E8B1C4CD0AD007748FE /* Utility.m */; };
 		87CF4E8E1C4CD506007748FE /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF4E8D1C4CD506007748FE /* RegisterViewModel.swift */; };
 		87CF4E901C4CE6C2007748FE /* ForgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF4E8F1C4CE6C2007748FE /* ForgetViewModel.swift */; };
+		87CF4E941C4DC94F007748FE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF4E931C4DC94F007748FE /* MenuViewController.swift */; };
+		87CF4E961C4DC99C007748FE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF4E951C4DC99C007748FE /* MainViewController.swift */; };
 		D9D2CD20359A82CF9C843B3B /* Pods_HomeAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A6DBD8CB4E17F428994822 /* Pods_HomeAccess.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +104,7 @@
 		8740ED071C3FAD75001F2E8B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		8740ED0C1C3FAE09001F2E8B /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		8740ED0E1C3FAE67001F2E8B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		874776121C4DD5DE00B63F72 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		8749B9A01C4CB52E0000E13E /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		8749B9A41C4CC27F0000E13E /* JVFloatLabeledText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JVFloatLabeledText.framework; path = Carthage/Build/iOS/JVFloatLabeledText.framework; sourceTree = "<group>"; };
 		8749B9A81C4CC3C00000E13E /* HomeAccess-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeAccess-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 		87CF4E8B1C4CD0AD007748FE /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		87CF4E8D1C4CD506007748FE /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		87CF4E8F1C4CE6C2007748FE /* ForgetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetViewModel.swift; sourceTree = "<group>"; };
+		87CF4E931C4DC94F007748FE /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		87CF4E951C4DC99C007748FE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E8A6DBD8CB4E17F428994822 /* Pods_HomeAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F60D55F0A77B3C61CB75B0 /* Pods-HomeAccess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeAccess.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeAccess/Pods-HomeAccess.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +186,7 @@
 		873CD63C1C434A560051A1B6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				87CF4E951C4DC99C007748FE /* MainViewController.swift */,
 				879B35271C45FACC00383F41 /* OpenDoor */,
 				873256711C44917D00B8E77F /* MainCell.swift */,
 				873CD6471C4382340051A1B6 /* ViewModel.swift */,
@@ -236,21 +243,31 @@
 		8740ECE61C3FA998001F2E8B /* HomeAccess */ = {
 			isa = PBXGroup;
 			children = (
+				8749B9A81C4CC3C00000E13E /* HomeAccess-Bridging-Header.h */,
+				8740ECE71C3FA998001F2E8B /* AppDelegate.swift */,
+				874776141C4DD8D700B63F72 /* Menu */,
+				873CD63C1C434A560051A1B6 /* Main */,
+				873CD63B1C434A450051A1B6 /* LogSystem */,
 				879B352F1C47427500383F41 /* Extensions */,
 				8732566F1C448D7000B8E77F /* Util */,
 				8732566E1C448D6700B8E77F /* Vendor */,
 				873CD6421C4353D00051A1B6 /* NetworkManager */,
 				873CD63F1C434C480051A1B6 /* UserCenter */,
-				8749B9A81C4CC3C00000E13E /* HomeAccess-Bridging-Header.h */,
-				8740ECE71C3FA998001F2E8B /* AppDelegate.swift */,
-				873CD63C1C434A560051A1B6 /* Main */,
-				873CD63B1C434A450051A1B6 /* LogSystem */,
 				8740ECEE1C3FA998001F2E8B /* Assets.xcassets */,
 				8740ECEB1C3FA998001F2E8B /* Main.storyboard */,
 				8740ECF01C3FA998001F2E8B /* LaunchScreen.storyboard */,
 				8740ECF31C3FA998001F2E8B /* Info.plist */,
 			);
 			path = HomeAccess;
+			sourceTree = "<group>";
+		};
+		874776141C4DD8D700B63F72 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				87CF4E931C4DC94F007748FE /* MenuViewController.swift */,
+				874776121C4DD5DE00B63F72 /* MenuTableViewCell.swift */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 		8749B9AC1C4CC8B40000E13E /* Register */ = {
@@ -484,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873CD63E1C434A790051A1B6 /* MainNavigationController.swift in Sources */,
+				87CF4E941C4DC94F007748FE /* MenuViewController.swift in Sources */,
 				873CD6481C4382340051A1B6 /* ViewModel.swift in Sources */,
 				877C4DD51C449DF000CFE731 /* ServerInfoViewModel.swift in Sources */,
 				879B352E1C461BED00383F41 /* DeviceDetailViewModel.swift in Sources */,
@@ -492,6 +510,7 @@
 				8740ED0F1C3FAE67001F2E8B /* LoginViewController.swift in Sources */,
 				8740ECEA1C3FA998001F2E8B /* ViewController.swift in Sources */,
 				873256721C44917D00B8E77F /* MainCell.swift in Sources */,
+				874776131C4DD5DE00B63F72 /* MenuTableViewCell.swift in Sources */,
 				8749B9B11C4CC96A0000E13E /* ForgetViewController.swift in Sources */,
 				879B352C1C46027E00383F41 /* DeviceDetailViewController.swift in Sources */,
 				873CD6441C4354050051A1B6 /* NetworkManager.swift in Sources */,
@@ -499,6 +518,7 @@
 				87CF4E8C1C4CD0AD007748FE /* Utility.m in Sources */,
 				8740ECE81C3FA998001F2E8B /* AppDelegate.swift in Sources */,
 				87BCB36A1C45E33400291CE9 /* Device.swift in Sources */,
+				87CF4E961C4DC99C007748FE /* MainViewController.swift in Sources */,
 				87BCB3521C44CC4200291CE9 /* DeviceListViewController.swift in Sources */,
 				87BCB3571C44CE8F00291CE9 /* DeviceListViewModel.swift in Sources */,
 				8749B9AE1C4CC8C80000E13E /* RegisterViewController.swift in Sources */,
