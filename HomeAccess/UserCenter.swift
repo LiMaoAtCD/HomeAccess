@@ -21,9 +21,5 @@ class UserCenter: NSObject {
         
         NSUserDefaults.standardUserDefaults().setBool(isLog, forKey: loginKey)
     }
-    
-    class func kSwitchFromLoginVCToMainVC() -> String{
-        return "kSwitchFromLoginVCToMainVC"
-    }
-    
+
 }

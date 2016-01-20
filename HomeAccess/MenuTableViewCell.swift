@@ -21,7 +21,6 @@ class MenuTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
 
     
@@ -33,11 +32,12 @@ class MenuTableViewCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setUpTitle()
-
     }
     
     func setUpTitle(){
         
+        self.selectionStyle = UITableViewCellSelectionStyle.None
+
         titleLabel = UILabel()
         titleLabel.textColor = UIColor.darkGrayColor()
         titleLabel.textAlignment = .Center
@@ -45,7 +45,7 @@ class MenuTableViewCell: UITableViewCell {
         self.addSubview(titleLabel)
         
         titleLabel.snp_makeConstraints { (make) -> Void in
-            make.centerX.equalTo(self.snp_centerX)
+            make.left.equalTo(self.snp_left).offset(20)
             make.centerY.equalTo(self.snp_centerY)
         }
     }

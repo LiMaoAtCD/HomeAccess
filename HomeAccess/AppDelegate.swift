@@ -13,70 +13,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var mainBottomVC: ECSlidingViewController!
+    var mainBottomVC: ECSlidingViewController! = {
+        let viewcontroller = ECSlidingViewController.initialFromStoryBoard() as! ECSlidingViewController
+    
+        return viewcontroller
+    }()
+    
+    var loginNavigationController: LoginNavigationController! = {
+        let loginVC = LoginViewController.initialFromStoryBoard() as! LoginViewController
+        let loginNavigationController = LoginNavigationController(rootViewController: loginVC)
+        return loginNavigationController
+    }()
 
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        setupSlidingViewController()
-
-        let login = UserCenter.login()
-        if login {
-
+        if UserCenter.login() {
+            
             self.window?.rootViewController = self.mainBottomVC
         } else{
             
-            let loginVC = LoginViewController.initialFromStoryBoard() as! LoginViewController
-            let loginNavigationController = LoginNavigationController(rootViewController: loginVC)
-            
             window?.rootViewController = loginNavigationController
-            
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchLoginVCToMain", name: UserCenter.kSwitchFromLoginVCToMainVC(), object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchLoginVCToMainVC", name: kSwitchFromLoginVCToMainVC, object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchMainVCToLoginVC", name: kSwitchFromMainVCToLoginVC, object: nil)
+
         }
+        
+        let width = UIScreen.mainScreen().bounds.size.width
+       mainBottomVC.anchorLeftRevealAmount = width * 3 / 5;
+
        self.window?.makeKeyAndVisible()
         
         return true
     }
     
-    func setupSlidingViewController() {
-        
-//        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//        
-//        let viewController = MainViewController.initialFromStoryBoard() as! MainViewController
-//
-//        
-//        let leftButton = UIButton(type: .Custom)
-//        leftButton.setTitle("Left", forState: .Normal)
-//        leftButton.setTitleColor(UIColor.redColor(), forState: .Normal)
-//        leftButton.addTarget(self, action: "archorLeft", forControlEvents: .TouchUpInside)
-//        leftButton.frame = CGRectMake(0, 0, 40, 30)
-//        let leftBarItem = UIBarButtonItem(customView: leftButton)
-//
-//        viewController.navigationItem.title = "云门"
-//        viewController.navigationItem.leftBarButtonItem  = leftBarItem
-//        viewController.view.backgroundColor = UIColor.whiteColor()
-//        
-//        
-//        let navigationController = MainPageNavigationController(rootViewController: viewController)
-
-    //        mainBottomVC = ECSlidingViewController.slidingWithTopViewController(navigationController)
-//        mainBottomVC.underLeftViewController  = MenuViewController.initialFromStoryBoard()
-//        
-//        // enable swiping on the top view
-//        navigationController.view.addGestureRecognizer(self.mainBottomVC.panGesture)
-//        
-//        // configure anchored layout
-//        mainBottomVC.anchorRightPeekAmount  = 100.0
-//        mainBottomVC.anchorLeftRevealAmount = 250.0
-        
-        mainBottomVC = ECSlidingViewController.initialFromStoryBoard() as! ECSlidingViewController
-    }
-    
-    func archorLeft() {
-        self.mainBottomVC.anchorTopViewToRightAnimated(true)
-    }
-    
-    func switchLoginVCToMain() {
+    func switchLoginVCToMainVC() {
         self.window?.rootViewController = self.mainBottomVC
+    }
+    
+    func switchMainVCToLoginVC() {
+        self.window?.rootViewController = self.loginNavigationController
     }
 
     func applicationWillResignActive(application: UIApplication) {

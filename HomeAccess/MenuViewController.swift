@@ -16,13 +16,40 @@ class MenuViewController: UIViewController,UITableViewDelegate {
     
     let items = ["个人设置","个人信息","权限管理","绑定设备","开关记录"]
 
+    var exitButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        setUpBackImage()
         setUpTableView()
+        setUpExitView()
+    }
+    
+    func setUpBackImage() {
+        let image = UIImage(named: "MenuBackground")
+        let imageview = UIImageView(image: image)
+        
+        self.view.addSubview(imageview)
+        imageview.snp_makeConstraints { (make) -> Void in
+            make.edges.equalTo(self.view)
+        }
+    }
+    
+    func setUpExitView() {
+        exitButton = UIButton(type: .Custom)
+        exitButton.setTitle("登出", forState: .Normal)
+        exitButton.backgroundColor = UIColor.clearColor()
+        exitButton.addTarget(self, action: "exit:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(exitButton)
+        
+        exitButton.snp_makeConstraints { (make) -> Void in
+            make.left.equalTo(self.view.snp_left).offset(20)
+            make.width.equalTo(50)
+            make.height.equalTo(35)
+            make.bottom.equalTo(-20)
+        }
     }
 
     func setUpTableView() {
@@ -36,6 +63,7 @@ class MenuViewController: UIViewController,UITableViewDelegate {
 
         
         tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.Plain)
+        tableView.scrollEnabled = false
         tableView.backgroundColor = UIColor.clearColor()
         self.view.addSubview(tableView)
         
@@ -51,26 +79,37 @@ class MenuViewController: UIViewController,UITableViewDelegate {
         tableView.delegate = self
         tableView.dataSource = dataSource
     }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    //Mark: 选择视图
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
         self.slidingViewController().topViewController.view.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
         
         
         //Todo: 选择要变换的视图
-        
-        
-        
         self.slidingViewController().resetTopViewAnimated(true)
     }
     
+    func exit(button: UIButton) {
+        self.slidingViewController().resetTopViewAnimated(true)
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(kSwitchFromMainVCToLoginVC, object: nil)
+    }
+    
+    //MARK: Cell高度设定
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         let tableViewHeight = CGRectGetHeight(self.tableView.bounds)
         return ceil(tableViewHeight / CGFloat(self.items.count))
     }
+
+    
+    
 }
