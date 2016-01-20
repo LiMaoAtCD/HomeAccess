@@ -167,7 +167,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         viewmodel.login { (success) -> Void in
             if success {
                 UserCenter.setLogin(true)
-                NSNotificationCenter.defaultCenter().postNotificationName(kSwitchFromLoginVCToMainVC, object: nil)
+                NSNotificationCenter.defaultCenter().postNotificationName(kViewControlerFromLoginToMain, object: nil)
             } else{
                 print("login error")
             }

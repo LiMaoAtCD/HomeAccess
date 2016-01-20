@@ -31,7 +31,7 @@ class MenuViewController: UIViewController,UITableViewDelegate {
     }
     
     func setUpBackImage() {
-        let image = UIImage(named: "MenuBackground")
+        let image = UIImage(named: "Beach")
         let imageview = UIImageView(image: image)
         
         self.view.addSubview(imageview)
@@ -98,11 +98,15 @@ class MenuViewController: UIViewController,UITableViewDelegate {
         
         switch indexPath.row {
         case 0:
-                self.slidingViewController().topViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SetNavigationController")
+            NSNotificationCenter.defaultCenter().postNotificationName(kViewControllerFromMainVCToSetVC, object: nil)
+        case 1:
+            NSNotificationCenter.defaultCenter().postNotificationName(kViewControllerFromMainVCToRecordVC, object: nil)
+        case 2:
+            NSNotificationCenter.defaultCenter().postNotificationName(kViewControllerFromMainVCToRecordVC, object: nil)
+        case 3:
+            NSNotificationCenter.defaultCenter().postNotificationName(kViewControllerFromMainVCToRecordVC, object: nil)
         case 4:
-             self.slidingViewController().topViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("RecordNavigationController")
-            
-            
+            NSNotificationCenter.defaultCenter().postNotificationName(kViewControllerFromMainVCToRecordVC, object: nil)
         default:
             self.slidingViewController().topViewController = self.mainNavigationVC
         }
@@ -115,8 +119,8 @@ class MenuViewController: UIViewController,UITableViewDelegate {
     
     func exit(button: UIButton) {
         self.slidingViewController().resetTopViewAnimated(true)
-        
-        NSNotificationCenter.defaultCenter().postNotificationName(kSwitchFromMainVCToLoginVC, object: nil)
+        UserCenter.setLogin(false)
+        NSNotificationCenter.defaultCenter().postNotificationName(kViewControlerFromMainToLogin, object: nil)
     }
     
     //MARK: Cell高度设定

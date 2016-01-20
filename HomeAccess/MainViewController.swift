@@ -19,10 +19,38 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
         //选择动态还是缩放
         self.dynamicTransition.slidingViewController = self.slidingViewController()
-//        dynamicArchorLeftMenu()
-        zoomArchorLeftMenu()
+        dynamicArchorLeftMenu()
+//        zoomArchorLeftMenu()
+        
+        
+        //设置页面通知
+        setUpNotifications()
+        
+        self.title = "云门"
         
     }
+    
+    
+    //Mark:
+    func setUpNotifications() {
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "gotoSetting", name: kViewControllerFromMainVCToSetVC, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "gotoRecording", name: kViewControllerFromMainVCToRecordVC, object: nil)
+
+    }
+    
+    func gotoSetting() {
+        let setVC = SetViewController.initialFromStoryBoard() as! SetViewController
+        self.navigationController?.pushViewController(setVC, animated: false)
+    }
+    
+    func gotoRecording() {
+        let recordVC = RecordViewController.initialFromStoryBoard() as! RecordViewController
+        self.navigationController?.pushViewController(recordVC, animated: false)
+
+    }
+    
+    //Mark: 左滑控制
     
     func dynamicArchorLeftMenu() {
         
@@ -41,11 +69,14 @@ class MainViewController: UIViewController {
         self.navigationController?.view.removeGestureRecognizer(self.dynamicTransitionPanGesture())
         self.navigationController?.view.addGestureRecognizer(self.slidingViewController().panGesture)
     }
+    
     func dynamicTransitionPanGesture() -> UIPanGestureRecognizer {
-            let dynamicTransitionPanGesture = UIPanGestureRecognizer(target: self.dynamicTransition, action: "handlePanGesture:")
+        let dynamicTransitionPanGesture = UIPanGestureRecognizer(target: self.dynamicTransition, action: "handlePanGesture:")
         return dynamicTransitionPanGesture
     }
     
+    
+    //Mark:
     
     
     

@@ -35,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else{
             
             window?.rootViewController = loginNavigationController
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchLoginVCToMainVC", name: kSwitchFromLoginVCToMainVC, object: nil)
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchMainVCToLoginVC", name: kSwitchFromMainVCToLoginVC, object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchLoginVCToMainVC", name: kViewControlerFromLoginToMain, object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchMainVCToLoginVC", name: kViewControlerFromMainToLogin, object: nil)
 
         }
         

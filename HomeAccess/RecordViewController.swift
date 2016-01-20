@@ -9,38 +9,12 @@
 import UIKit
 
 class RecordViewController: UIViewController {
-    
-    var dynamicTransitionPanGesture: UIPanGestureRecognizer?
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        configureGesture()
-    }
-    
-    func configureGesture() {
-        
-        let dynamicTransition = self.slidingViewController().delegate
-        
-        if dynamicTransition is MEDynamicTransition {
-            if let _ = dynamicTransitionPanGesture {
-            } else {
-                dynamicTransitionPanGesture = UIPanGestureRecognizer(target: dynamicTransition, action: "handlePanGesture:")
-            }
-            
-            self.navigationController?.view.removeGestureRecognizer(self.slidingViewController().panGesture)
-            self.navigationController?.view.addGestureRecognizer(dynamicTransitionPanGesture!)
-        } else {
-            self.navigationController?.view.removeGestureRecognizer(dynamicTransitionPanGesture!)
-            self.navigationController?.view.addGestureRecognizer(self.slidingViewController().panGesture)
-        }
+        self.title = "开门记录"
     }
 
 
