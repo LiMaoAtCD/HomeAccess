@@ -15,6 +15,8 @@ class MenuTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setUpTitle()
+
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -25,10 +27,28 @@ class MenuTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+        setUpTitle()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setUpTitle()
+
     }
+    
+    func setUpTitle(){
+        
+        titleLabel = UILabel()
+        titleLabel.textColor = UIColor.darkGrayColor()
+        titleLabel.textAlignment = .Center
+        titleLabel.font = UIFont.boldSystemFontOfSize(30.0)
+        self.addSubview(titleLabel)
+        
+        titleLabel.snp_makeConstraints { (make) -> Void in
+            make.centerX.equalTo(self.snp_centerX)
+            make.centerY.equalTo(self.snp_centerY)
+        }
+    }
+    
+
 }

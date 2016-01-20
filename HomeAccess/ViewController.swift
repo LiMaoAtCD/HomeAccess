@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDelegate,ECSlidingViewControllerDelegate {
 
     var viewModel: ViewModel!
     
     var tableView: UITableView!
     var dataSource: DataSource!
+    
+    
     
     
     override func viewDidLoad() {

@@ -38,35 +38,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupSlidingViewController() {
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        let viewController = ViewController.initialFromStoryBoard() as! ViewController
-        
-        let leftButton = UIButton(type: .Custom)
-        leftButton.setTitle("Left", forState: .Normal)
-        leftButton.setTitleColor(UIColor.redColor(), forState: .Normal)
-        leftButton.addTarget(self, action: "archorLeft", forControlEvents: .TouchUpInside)
-        leftButton.frame = CGRectMake(0, 0, 40, 30)
-        let leftBarItem = UIBarButtonItem(customView: leftButton)
+//        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        
+//        let viewController = MainViewController.initialFromStoryBoard() as! MainViewController
+//
+//        
+//        let leftButton = UIButton(type: .Custom)
+//        leftButton.setTitle("Left", forState: .Normal)
+//        leftButton.setTitleColor(UIColor.redColor(), forState: .Normal)
+//        leftButton.addTarget(self, action: "archorLeft", forControlEvents: .TouchUpInside)
+//        leftButton.frame = CGRectMake(0, 0, 40, 30)
+//        let leftBarItem = UIBarButtonItem(customView: leftButton)
+//
+//        viewController.navigationItem.title = "云门"
+//        viewController.navigationItem.leftBarButtonItem  = leftBarItem
+//        viewController.view.backgroundColor = UIColor.whiteColor()
+//        
+//        
+//        let navigationController = MainPageNavigationController(rootViewController: viewController)
 
-        viewController.navigationItem.title = "云门"
-        viewController.navigationItem.leftBarButtonItem  = leftBarItem
-        viewController.view.backgroundColor = UIColor.whiteColor()
+    //        mainBottomVC = ECSlidingViewController.slidingWithTopViewController(navigationController)
+//        mainBottomVC.underLeftViewController  = MenuViewController.initialFromStoryBoard()
+//        
+//        // enable swiping on the top view
+//        navigationController.view.addGestureRecognizer(self.mainBottomVC.panGesture)
+//        
+//        // configure anchored layout
+//        mainBottomVC.anchorRightPeekAmount  = 100.0
+//        mainBottomVC.anchorLeftRevealAmount = 250.0
         
-        
-        let navigationController = UINavigationController(rootViewController: viewController)
-        
-        
-        
-        mainBottomVC = ECSlidingViewController.slidingWithTopViewController(navigationController)
-        mainBottomVC.underLeftViewController  = MenuViewController.initialFromStoryBoard()
-        
-        // enable swiping on the top view
-        navigationController.view.addGestureRecognizer(self.mainBottomVC.panGesture)
-        
-        // configure anchored layout
-        mainBottomVC.anchorRightPeekAmount  = 100.0
-        mainBottomVC.anchorLeftRevealAmount = 250.0
+        mainBottomVC = ECSlidingViewController.initialFromStoryBoard() as! ECSlidingViewController
     }
     
     func archorLeft() {

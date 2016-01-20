@@ -76,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQb-wh-qGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2587" y="-398"/>
+            <point key="canvasLocation" x="2847" y="-381"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="HUn-Zz-hpK">
@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5I-rM-oNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3285" y="-389"/>
+            <point key="canvasLocation" x="3546" y="-377.25"/>
         </scene>
         <!--Sliding View Controller-->
         <scene sceneID="ha4-vC-dRg">
@@ -163,10 +163,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="topViewControllerStoryboardId" value="MainPageNavigationController"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="underLeftViewControllerStoryboardId" value="MenuViewController"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NBZ-YE-vzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41" y="-1067"/>
+            <point key="canvasLocation" x="-214.5" y="-1067.25"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="gMG-LH-7sW">
@@ -179,57 +183,8 @@
                     <view key="view" contentMode="scaleToFill" id="nl7-VV-Od8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LYA-6Q-hhC">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="6pu-CA-4iY" id="7AU-Jc-fTp"/>
-                                    <outlet property="delegate" destination="6pu-CA-4iY" id="Ije-o4-Jsp"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="LYA-6Q-hhC" firstAttribute="top" secondItem="29O-Rv-76T" secondAttribute="bottom" constant="270" id="Ibt-67-Xpb">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
-                            </constraint>
-                            <constraint firstAttribute="trailing" secondItem="LYA-6Q-hhC" secondAttribute="trailing" constant="119" id="da4-ok-ZKk">
-                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
-                            </constraint>
-                            <constraint firstItem="LYA-6Q-hhC" firstAttribute="leading" secondItem="nl7-VV-Od8" secondAttribute="leading" constant="41" id="jaX-O1-efR">
-                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
-                            </constraint>
-                            <constraint firstItem="Ktl-X9-ArF" firstAttribute="top" secondItem="LYA-6Q-hhC" secondAttribute="bottom" constant="382" id="rZk-Jk-fAt">
-                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
-                            </constraint>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="LYA-6Q-hhC"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="rZk-Jk-fAt"/>
-                                <exclude reference="Ibt-67-Xpb"/>
-                                <exclude reference="da4-ok-ZKk"/>
-                                <exclude reference="jaX-O1-efR"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="LYA-6Q-hhC"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="rZk-Jk-fAt"/>
-                                <include reference="Ibt-67-Xpb"/>
-                                <include reference="da4-ok-ZKk"/>
-                                <include reference="jaX-O1-efR"/>
-                            </mask>
-                        </variation>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <connections>
-                        <outlet property="tableView" destination="LYA-6Q-hhC" id="AaT-Kx-xjM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="At9-dm-EtO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,7 +193,7 @@
         <!--Main View Controller-->
         <scene sceneID="Uzw-BZ-E14">
             <objects>
-                <viewController id="mh1-ww-2Bb" customClass="MainViewController" customModule="HomeAccess" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="mh1-ww-2Bb" customClass="MainViewController" customModule="HomeAccess" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sw4-CX-psU"/>
                         <viewControllerLayoutGuide type="bottom" id="GZj-ev-FaM"/>
@@ -316,10 +271,10 @@
             </objects>
             <point key="canvasLocation" x="41" y="-381"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Page Navigation Controller-->
         <scene sceneID="arm-rl-o7T">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xxo-wa-eTg" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainPageNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Xxo-wa-eTg" customClass="MainPageNavigationController" customModule="HomeAccess" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n1f-8g-ohq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
