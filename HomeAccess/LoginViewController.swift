@@ -164,18 +164,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     @objc private func login(){
-        
-        
-    
         viewmodel.login { (success) -> Void in
             if success {
-//                UserCenter.setLogin(true)
+                UserCenter.setLogin(true)
                 NSNotificationCenter.defaultCenter().postNotificationName(kSwitchFromLoginVCToMainVC, object: nil)
             } else{
                 print("login error")
             }
         }
-
     }
     
     @objc private func closeKeyboard(){

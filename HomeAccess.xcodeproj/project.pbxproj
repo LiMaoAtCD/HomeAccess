@@ -16,6 +16,7 @@
 		873CD64E1C439F2B0051A1B6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873CD64D1C439F2B0051A1B6 /* LoginViewModel.swift */; };
 		87409AF71C4F66C3008486AE /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87409AF61C4F66C3008486AE /* GlobalConstants.swift */; };
 		87409AFB1C4F6B04008486AE /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87409AFA1C4F6B04008486AE /* SetViewController.swift */; };
+		87409AFE1C4F8B05008486AE /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87409AFD1C4F8B05008486AE /* RecordViewController.swift */; };
 		8740ECE81C3FA998001F2E8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740ECE71C3FA998001F2E8B /* AppDelegate.swift */; };
 		8740ECEA1C3FA998001F2E8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740ECE91C3FA998001F2E8B /* ViewController.swift */; };
 		8740ECED1C3FA998001F2E8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8740ECEB1C3FA998001F2E8B /* Main.storyboard */; };
@@ -95,6 +96,7 @@
 		873CD64D1C439F2B0051A1B6 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		87409AF61C4F66C3008486AE /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		87409AFA1C4F6B04008486AE /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		87409AFD1C4F8B05008486AE /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		8740ECE41C3FA998001F2E8B /* HomeAccess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeAccess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8740ECE71C3FA998001F2E8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8740ECE91C3FA998001F2E8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +236,14 @@
 			name = Setting;
 			sourceTree = "<group>";
 		};
+		87409AFC1C4F8AED008486AE /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				87409AFD1C4F8B05008486AE /* RecordViewController.swift */,
+			);
+			name = Record;
+			sourceTree = "<group>";
+		};
 		8740ECDB1C3FA998001F2E8B = {
 			isa = PBXGroup;
 			children = (
@@ -262,8 +272,10 @@
 		8740ECE61C3FA998001F2E8B /* HomeAccess */ = {
 			isa = PBXGroup;
 			children = (
+				87409AFC1C4F8AED008486AE /* Record */,
 				87409AF91C4F6AED008486AE /* Setting */,
 				8749B9A81C4CC3C00000E13E /* HomeAccess-Bridging-Header.h */,
+				8740ECEB1C3FA998001F2E8B /* Main.storyboard */,
 				8740ECE71C3FA998001F2E8B /* AppDelegate.swift */,
 				874776141C4DD8D700B63F72 /* Menu */,
 				873CD63C1C434A560051A1B6 /* Main */,
@@ -274,7 +286,6 @@
 				873CD6421C4353D00051A1B6 /* NetworkManager */,
 				873CD63F1C434C480051A1B6 /* UserCenter */,
 				8740ECEE1C3FA998001F2E8B /* Assets.xcassets */,
-				8740ECEB1C3FA998001F2E8B /* Main.storyboard */,
 				8740ECF01C3FA998001F2E8B /* LaunchScreen.storyboard */,
 				8740ECF31C3FA998001F2E8B /* Info.plist */,
 			);
@@ -556,6 +567,7 @@
 				87BCB36A1C45E33400291CE9 /* Device.swift in Sources */,
 				87CF4E961C4DC99C007748FE /* MainViewController.swift in Sources */,
 				87BCB3521C44CC4200291CE9 /* DeviceListViewController.swift in Sources */,
+				87409AFE1C4F8B05008486AE /* RecordViewController.swift in Sources */,
 				87BCB3571C44CE8F00291CE9 /* DeviceListViewModel.swift in Sources */,
 				8749B9AE1C4CC8C80000E13E /* RegisterViewController.swift in Sources */,
 				8732566C1C448D4300B8E77F /* DataSource.swift in Sources */,

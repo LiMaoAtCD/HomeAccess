@@ -14,7 +14,7 @@ class MenuViewController: UIViewController,UITableViewDelegate {
     
     var dataSource: DataSource!
     
-    let items = ["个人设置","个人信息","权限管理","绑定设备","开关记录"]
+    let items = ["个人信息","个人信息","权限管理","绑定设备","开关记录"]
 
     var exitButton: UIButton!
     
@@ -79,6 +79,7 @@ class MenuViewController: UIViewController,UITableViewDelegate {
         
         
         tableView.registerClass(MenuTableViewCell.self, forCellReuseIdentifier: MenuTableViewCell.identifier())
+        tableView.separatorStyle = .None
         tableView.delegate = self
         tableView.dataSource = dataSource
     }
@@ -98,7 +99,9 @@ class MenuViewController: UIViewController,UITableViewDelegate {
         switch indexPath.row {
         case 0:
                 self.slidingViewController().topViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SetNavigationController")
-//        case 1:
+        case 4:
+             self.slidingViewController().topViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("RecordNavigationController")
+            
             
         default:
             self.slidingViewController().topViewController = self.mainNavigationVC

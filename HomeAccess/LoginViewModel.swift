@@ -24,7 +24,7 @@ class LoginViewModel: NSObject {
         
         //1.验证手机号密码合法性
         
-        let validNumber = Utility.isMobileNumber(username)
+        _ = Utility.isMobileNumber(username)
         
 //        let validePassword = Utility
         

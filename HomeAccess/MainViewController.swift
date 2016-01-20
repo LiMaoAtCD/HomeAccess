@@ -19,7 +19,8 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
         //选择动态还是缩放
         self.dynamicTransition.slidingViewController = self.slidingViewController()
-        dynamicArchorLeftMenu()
+//        dynamicArchorLeftMenu()
+        zoomArchorLeftMenu()
         
     }
     

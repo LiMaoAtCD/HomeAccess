@@ -33,6 +33,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HSm-8C-cF0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dlj-d9-mIe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -166,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5I-rM-oNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3546" y="-377.25"/>
+            <point key="canvasLocation" x="4464" y="-377.25"/>
         </scene>
         <!--Sliding View Controller-->
         <scene sceneID="ha4-vC-dRg">
@@ -271,6 +272,25 @@
             </objects>
             <point key="canvasLocation" x="2395.5" y="-1067.25"/>
         </scene>
+        <!--Record View Controller-->
+        <scene sceneID="fHf-dD-m5q">
+            <objects>
+                <viewController storyboardIdentifier="RecordViewController" id="VJk-gd-snD" customClass="RecordViewController" customModule="HomeAccess" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hk3-fW-gAs"/>
+                        <viewControllerLayoutGuide type="bottom" id="V0X-lf-V3l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o7S-CT-Eod">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jgP-83-blO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXc-bJ-TrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4204.5" y="-1011"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tfg-DP-b31">
             <objects>
@@ -324,6 +344,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfO-g9-cMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="838.5" y="327"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nhw-XU-oqL">
+            <objects>
+                <navigationController storyboardIdentifier="RecordNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="JyY-tU-zwJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cFV-qr-gKh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VJk-gd-snD" kind="relationship" relationship="rootViewController" id="JZb-3d-8J1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPh-kR-LRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3286.5" y="-1011"/>
         </scene>
     </scenes>
 </document>
