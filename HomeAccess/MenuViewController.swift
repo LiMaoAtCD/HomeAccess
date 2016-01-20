@@ -18,6 +18,7 @@ class MenuViewController: UIViewController,UITableViewDelegate {
 
     var exitButton: UIButton!
     
+    var mainNavigationVC: MainPageNavigationController!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +26,8 @@ class MenuViewController: UIViewController,UITableViewDelegate {
         setUpBackImage()
         setUpTableView()
         setUpExitView()
+        
+        mainNavigationVC = self.slidingViewController().topViewController as!MainPageNavigationController
     }
     
     func setUpBackImage() {
@@ -91,6 +94,16 @@ class MenuViewController: UIViewController,UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.slidingViewController().topViewController.view.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
+        
+        switch indexPath.row {
+        case 0:
+                self.slidingViewController().topViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SetNavigationController")
+//        case 1:
+            
+        default:
+            self.slidingViewController().topViewController = self.mainNavigationVC
+        }
+        
         
         
         //Todo: 选择要变换的视图

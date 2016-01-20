@@ -40,10 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         }
         
-        let width = UIScreen.mainScreen().bounds.size.width
-       mainBottomVC.anchorLeftRevealAmount = width * 3 / 5;
+       mainBottomVC.anchorRightPeekAmount = kLeftMenuWidth;
 
        self.window?.makeKeyAndVisible()
+        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         
         return true
     }

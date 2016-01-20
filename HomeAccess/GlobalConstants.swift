@@ -15,3 +15,4 @@ class GlobalConstants: NSObject {
 let kSwitchFromLoginVCToMainVC = "kSwitchFromLoginVCToMainVC"
 let kSwitchFromMainVCToLoginVC = "kSwitchFromMainVCToLoginVC"
 
+let kLeftMenuWidth = UIScreen.mainScreen().bounds.size.width * 2 / 5

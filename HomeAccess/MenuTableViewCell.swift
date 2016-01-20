@@ -45,8 +45,9 @@ class MenuTableViewCell: UITableViewCell {
         self.addSubview(titleLabel)
         
         titleLabel.snp_makeConstraints { (make) -> Void in
-            make.left.equalTo(self.snp_left).offset(20)
             make.centerY.equalTo(self.snp_centerY)
+            make.centerX.equalTo(self.snp_centerX).multipliedBy(3.0 / 5)
+            
         }
     }
     
