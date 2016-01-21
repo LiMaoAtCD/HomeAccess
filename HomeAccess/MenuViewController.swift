@@ -31,7 +31,7 @@ class MenuViewController: UIViewController,UITableViewDelegate {
     }
     
     func setUpBackImage() {
-        let image = UIImage(named: "Beach")
+        let image = UIImage(named: "Water")
         let imageview = UIImageView(image: image)
         
         self.view.addSubview(imageview)
@@ -42,7 +42,7 @@ class MenuViewController: UIViewController,UITableViewDelegate {
     
     func setUpExitView() {
         exitButton = UIButton(type: .Custom)
-        exitButton.setTitle("登出", forState: .Normal)
+        exitButton.setTitle("个人", forState: .Normal)
         exitButton.backgroundColor = UIColor.clearColor()
         exitButton.addTarget(self, action: "exit:", forControlEvents: .TouchUpInside)
         self.view.addSubview(exitButton)

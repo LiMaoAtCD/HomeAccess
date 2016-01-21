@@ -1,5 +1,5 @@
 //
-//  NotifiesViewController.swift
+//  AuthorityNavigationController.swift
 //  HomeAccess
 //
 //  Created by AlienLi on 16/1/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotifiesViewController: UIViewController {
+class AuthorityNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +21,6 @@ class NotifiesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func closeNotifies(sender: AnyObject) {
-    
-        self .dismissViewControllerAnimated(true, completion: nil)
-    }
 
     /*
     // MARK: - Navigation

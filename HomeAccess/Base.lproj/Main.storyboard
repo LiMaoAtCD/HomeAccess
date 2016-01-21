@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="827" y="-381"/>
         </scene>
-        <!--Notifies View Controller-->
+        <!--系统公告-->
         <scene sceneID="QQc-2E-oKk">
             <objects>
                 <viewController storyboardIdentifier="NotifiesViewController" id="vxF-t3-FFN" customClass="NotifiesViewController" customModule="HomeAccess" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Fuo-9S-7Re"/>
+                    <navigationItem key="navigationItem" title="系统公告" id="Fuo-9S-7Re">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="1BA-Om-yAc">
+                            <connections>
+                                <action selector="closeNotifies:" destination="vxF-t3-FFN" id="C4t-MC-QXW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEp-cw-49u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -319,10 +325,10 @@
             </objects>
             <point key="canvasLocation" x="3286.5" y="-1011"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Notifies Navigation Controller-->
         <scene sceneID="ulE-qw-vZC">
             <objects>
-                <navigationController storyboardIdentifier="NotifiesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="GNU-dZ-MA0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NotifiesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="GNU-dZ-MA0" customClass="NotifiesNavigationController" customModule="HomeAccess" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Zt-HP-JY8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

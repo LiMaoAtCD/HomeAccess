@@ -86,6 +86,8 @@ class MainViewController: UIViewController {
         
         leftNavigationItem.setTitle("菜单", forState: .Normal)
         leftNavigationItem.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        leftNavigationItem.frame = CGRectMake(0, 0, 40, 35)
+
         leftNavigationItem.addTarget(self, action: "openLeftMenuView:", forControlEvents: .TouchUpInside)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftNavigationItem)
@@ -94,9 +96,10 @@ class MainViewController: UIViewController {
         
         rightNavigationItem.setTitle("公告", forState: .Normal)
         rightNavigationItem.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        rightNavigationItem.frame = CGRectMake(0, 0, 40, 35)
         rightNavigationItem.addTarget(self, action: "openRightMenuView:", forControlEvents: .TouchUpInside)
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: rightNavigationItem)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightNavigationItem)
         
     
         
@@ -155,7 +158,7 @@ class MainViewController: UIViewController {
     }
     
     func openLeftMenuView(button: UIButton){
-        
+        self.slidingViewController().anchorTopViewToRightAnimated(true)
     }
     
     func openRightMenuView(button: UIButton) {
