@@ -42,6 +42,8 @@
 		8749B9A71C4CC28C0000E13E /* JVFloatLabeledText.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8749B9A41C4CC27F0000E13E /* JVFloatLabeledText.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8749B9AE1C4CC8C80000E13E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8749B9AD1C4CC8C80000E13E /* RegisterViewController.swift */; };
 		8749B9B11C4CC96A0000E13E /* ForgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8749B9B01C4CC96A0000E13E /* ForgetViewController.swift */; };
+		8759B7381C507C1E007FCE0A /* NotifiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B7371C507C1E007FCE0A /* NotifiesViewController.swift */; };
+		8759B73A1C507CA0007FCE0A /* NotifiesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B7391C507CA0007FCE0A /* NotifiesNavigationController.swift */; };
 		876AE4991C4F1F4400702A1F /* MainPageNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876AE4981C4F1F4300702A1F /* MainPageNavigationController.swift */; };
 		877C4DD01C449DB800CFE731 /* ServerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */; };
 		877C4DD51C449DF000CFE731 /* ServerInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */; };
@@ -119,6 +121,8 @@
 		8749B9A81C4CC3C00000E13E /* HomeAccess-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeAccess-Bridging-Header.h"; sourceTree = "<group>"; };
 		8749B9AD1C4CC8C80000E13E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8749B9B01C4CC96A0000E13E /* ForgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetViewController.swift; sourceTree = "<group>"; };
+		8759B7371C507C1E007FCE0A /* NotifiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiesViewController.swift; sourceTree = "<group>"; };
+		8759B7391C507CA0007FCE0A /* NotifiesNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiesNavigationController.swift; sourceTree = "<group>"; };
 		876AE4981C4F1F4300702A1F /* MainPageNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageNavigationController.swift; sourceTree = "<group>"; };
 		877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewController.swift; sourceTree = "<group>"; };
 		877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewModel.swift; sourceTree = "<group>"; };
@@ -275,6 +279,7 @@
 		8740ECE61C3FA998001F2E8B /* HomeAccess */ = {
 			isa = PBXGroup;
 			children = (
+				8759B7361C507BE9007FCE0A /* Notifies */,
 				87409AFC1C4F8AED008486AE /* Record */,
 				87409AF91C4F6AED008486AE /* Setting */,
 				8749B9A81C4CC3C00000E13E /* HomeAccess-Bridging-Header.h */,
@@ -320,6 +325,15 @@
 				87CF4E8F1C4CE6C2007748FE /* ForgetViewModel.swift */,
 			);
 			name = ForgetPassword;
+			sourceTree = "<group>";
+		};
+		8759B7361C507BE9007FCE0A /* Notifies */ = {
+			isa = PBXGroup;
+			children = (
+				8759B7371C507C1E007FCE0A /* NotifiesViewController.swift */,
+				8759B7391C507CA0007FCE0A /* NotifiesNavigationController.swift */,
+			);
+			name = Notifies;
 			sourceTree = "<group>";
 		};
 		877C4DCE1C449D8300CFE731 /* ServerInfo */ = {
@@ -558,6 +572,7 @@
 				877C4DD01C449DB800CFE731 /* ServerInfoViewController.swift in Sources */,
 				87409AF71C4F66C3008486AE /* GlobalConstants.swift in Sources */,
 				8740ED0F1C3FAE67001F2E8B /* LoginViewController.swift in Sources */,
+				8759B73A1C507CA0007FCE0A /* NotifiesNavigationController.swift in Sources */,
 				8740ECEA1C3FA998001F2E8B /* ViewController.swift in Sources */,
 				873256721C44917D00B8E77F /* MainCell.swift in Sources */,
 				87409AFB1C4F6B04008486AE /* SetViewController.swift in Sources */,
@@ -576,6 +591,7 @@
 				8749B9AE1C4CC8C80000E13E /* RegisterViewController.swift in Sources */,
 				8732566C1C448D4300B8E77F /* DataSource.swift in Sources */,
 				87CF4E901C4CE6C2007748FE /* ForgetViewModel.swift in Sources */,
+				8759B7381C507C1E007FCE0A /* NotifiesViewController.swift in Sources */,
 				877C4DD91C449EA200CFE731 /* ServerInfoDataFrame.swift in Sources */,
 				87BCB36F1C45E8D700291CE9 /* UserInfoViewModel.swift in Sources */,
 				879B35311C47428600383F41 /* Extensions.swift in Sources */,
