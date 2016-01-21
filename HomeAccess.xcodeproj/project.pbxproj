@@ -45,6 +45,10 @@
 		8759B7381C507C1E007FCE0A /* NotifiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B7371C507C1E007FCE0A /* NotifiesViewController.swift */; };
 		8759B73A1C507CA0007FCE0A /* NotifiesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B7391C507CA0007FCE0A /* NotifiesNavigationController.swift */; };
 		8759B73D1C50832D007FCE0A /* AuthorityNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B73C1C50832D007FCE0A /* AuthorityNavigationController.swift */; };
+		8759B7411C508B5A007FCE0A /* GTNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B73F1C508B5A007FCE0A /* GTNotification.swift */; };
+		8759B7421C508B5A007FCE0A /* GTNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B7401C508B5A007FCE0A /* GTNotificationManager.swift */; };
+		8759B7441C508BFA007FCE0A /* RecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B7431C508BFA007FCE0A /* RecordViewModel.swift */; };
+		8759B7461C508D45007FCE0A /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B7451C508D45007FCE0A /* RecordCell.swift */; };
 		876AE4991C4F1F4400702A1F /* MainPageNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876AE4981C4F1F4300702A1F /* MainPageNavigationController.swift */; };
 		877C4DD01C449DB800CFE731 /* ServerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */; };
 		877C4DD51C449DF000CFE731 /* ServerInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */; };
@@ -125,6 +129,10 @@
 		8759B7371C507C1E007FCE0A /* NotifiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiesViewController.swift; sourceTree = "<group>"; };
 		8759B7391C507CA0007FCE0A /* NotifiesNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiesNavigationController.swift; sourceTree = "<group>"; };
 		8759B73C1C50832D007FCE0A /* AuthorityNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorityNavigationController.swift; sourceTree = "<group>"; };
+		8759B73F1C508B5A007FCE0A /* GTNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTNotification.swift; sourceTree = "<group>"; };
+		8759B7401C508B5A007FCE0A /* GTNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTNotificationManager.swift; sourceTree = "<group>"; };
+		8759B7431C508BFA007FCE0A /* RecordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewModel.swift; sourceTree = "<group>"; };
+		8759B7451C508D45007FCE0A /* RecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		876AE4981C4F1F4300702A1F /* MainPageNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageNavigationController.swift; sourceTree = "<group>"; };
 		877C4DCF1C449DB800CFE731 /* ServerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewController.swift; sourceTree = "<group>"; };
 		877C4DD41C449DF000CFE731 /* ServerInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewModel.swift; sourceTree = "<group>"; };
@@ -175,6 +183,7 @@
 		8732566E1C448D6700B8E77F /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				8759B73E1C508B5A007FCE0A /* GTNotification */,
 				87D768771C4DE97900CE3575 /* ECSlidingViewControllerAccessory */,
 			);
 			name = Vendor;
@@ -249,6 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				87409AFD1C4F8B05008486AE /* RecordViewController.swift */,
+				8759B7431C508BFA007FCE0A /* RecordViewModel.swift */,
+				8759B7451C508D45007FCE0A /* RecordCell.swift */,
 			);
 			name = Record;
 			sourceTree = "<group>";
@@ -345,6 +356,15 @@
 				8759B73C1C50832D007FCE0A /* AuthorityNavigationController.swift */,
 			);
 			name = authority;
+			sourceTree = "<group>";
+		};
+		8759B73E1C508B5A007FCE0A /* GTNotification */ = {
+			isa = PBXGroup;
+			children = (
+				8759B73F1C508B5A007FCE0A /* GTNotification.swift */,
+				8759B7401C508B5A007FCE0A /* GTNotificationManager.swift */,
+			);
+			path = GTNotification;
 			sourceTree = "<group>";
 		};
 		877C4DCE1C449D8300CFE731 /* ServerInfo */ = {
@@ -573,6 +593,7 @@
 				87D768751C4DE97500CE3575 /* MEDynamicTransition.m in Sources */,
 				873CD63E1C434A790051A1B6 /* MainNavigationController.swift in Sources */,
 				87CF4E941C4DC94F007748FE /* MenuViewController.swift in Sources */,
+				8759B7421C508B5A007FCE0A /* GTNotificationManager.swift in Sources */,
 				87D768761C4DE97500CE3575 /* MEZoomAnimationController.m in Sources */,
 				873CD6481C4382340051A1B6 /* ViewModel.swift in Sources */,
 				873554B71C4FCE260069E404 /* MainViewModel.swift in Sources */,
@@ -585,6 +606,7 @@
 				8740ED0F1C3FAE67001F2E8B /* LoginViewController.swift in Sources */,
 				8759B73A1C507CA0007FCE0A /* NotifiesNavigationController.swift in Sources */,
 				8740ECEA1C3FA998001F2E8B /* ViewController.swift in Sources */,
+				8759B7461C508D45007FCE0A /* RecordCell.swift in Sources */,
 				873256721C44917D00B8E77F /* MainCell.swift in Sources */,
 				87409AFB1C4F6B04008486AE /* SetViewController.swift in Sources */,
 				874776131C4DD5DE00B63F72 /* MenuTableViewCell.swift in Sources */,
@@ -596,6 +618,7 @@
 				8740ECE81C3FA998001F2E8B /* AppDelegate.swift in Sources */,
 				87BCB36A1C45E33400291CE9 /* Device.swift in Sources */,
 				8759B73D1C50832D007FCE0A /* AuthorityNavigationController.swift in Sources */,
+				8759B7411C508B5A007FCE0A /* GTNotification.swift in Sources */,
 				87CF4E961C4DC99C007748FE /* MainViewController.swift in Sources */,
 				87BCB3521C44CC4200291CE9 /* DeviceListViewController.swift in Sources */,
 				87409AFE1C4F8B05008486AE /* RecordViewController.swift in Sources */,
@@ -606,6 +629,7 @@
 				8759B7381C507C1E007FCE0A /* NotifiesViewController.swift in Sources */,
 				877C4DD91C449EA200CFE731 /* ServerInfoDataFrame.swift in Sources */,
 				87BCB36F1C45E8D700291CE9 /* UserInfoViewModel.swift in Sources */,
+				8759B7441C508BFA007FCE0A /* RecordViewModel.swift in Sources */,
 				879B35311C47428600383F41 /* Extensions.swift in Sources */,
 				87CF4E8E1C4CD506007748FE /* RegisterViewModel.swift in Sources */,
 				879B35291C45FBB600383F41 /* DeviceCell.swift in Sources */,

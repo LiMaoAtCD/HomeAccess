@@ -11,11 +11,11 @@ import UIKit
 typealias CellHandler = (UITableViewCell , AnyObject) -> Void
 class DataSource: NSObject, UITableViewDataSource {
 
-    var items: [AnyObject]!
+    var items: [AnyObject]?
     var identifier: String!
     var handler: CellHandler?
     
-    init(items: [AnyObject], and identifier: String, handler: CellHandler) {
+    init(items: [AnyObject]?, and identifier: String, handler: CellHandler) {
         self.items = items
         self.identifier = identifier
         self.handler = handler
@@ -27,7 +27,11 @@ class DataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+
+        guard let its = items else{
+            return 0
+        }
+        return its.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -41,7 +45,7 @@ class DataSource: NSObject, UITableViewDataSource {
     }
     
     func itemForIndexPath(indexPath: NSIndexPath) -> AnyObject {
-        return self.items[indexPath.row]
+        return self.items![indexPath.row]
     }
 }
 
